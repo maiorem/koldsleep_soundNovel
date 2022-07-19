@@ -10,7 +10,7 @@ import HomeMain from './components/HomeMain.vue'
 export default {
   name: 'App',
   components: {
-    HomeMain
+    HomeMain,
   }
 }
 </script>
