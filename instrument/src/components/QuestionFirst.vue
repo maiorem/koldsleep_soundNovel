@@ -106,22 +106,17 @@ button {
   height: 57px;
   width: 313px;
   border-radius: 12px;
-
-
   background: rgba(26, 26, 26, 0.9);
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(40px);
 
-
-  opacity: 0.1;
-  border: 1px solid rgba(255, 255, 255, 1);
-  color: #FFFFFF;
-
+  border: 1px solid rgba(255, 255, 255, 0.137);
 
   margin-bottom: 10px;
 }
 
 .answer_btn:hover {
-  border: 1px solid rgba(255, 255, 255, 1);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.137);
 }
 
 .answers_box {
@@ -134,6 +129,7 @@ button {
   align-items: center;
   text-align: center;
 
+  opacity: 0.9;
   color: #FFFFFF;
 }
 
