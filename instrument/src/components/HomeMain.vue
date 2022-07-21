@@ -31,6 +31,7 @@ export default {
 @media (max-width: 600px) {
   .background {
     width: 100vw;
+    height: 820px;
     position:absolute;
   }
 }

@@ -157,9 +157,8 @@ button {
     width: 100vw;
     height: 676px;
     left: 0;
-    top: 15.03%;
+    top: 3.45%;
     text-align: center;
-    bottom: 108px;
     
   }
   .content_box {
