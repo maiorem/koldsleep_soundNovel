@@ -28,4 +28,12 @@ export default {
     background-repeat: no-repeat;
     background-position: center; 
 }
+@media (max-width: 600px) {
+  .background {
+    width: 100vw;
+    position:absolute;
+  }
+}
+
+
 </style>

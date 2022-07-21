@@ -151,5 +151,32 @@ button {
   position: absolute;
   bottom: 0px;
 }
+@media (max-width: 600px) {
+  .quiz_1 {
+    position: relative;
+    width: 100vw;
+    height: 676px;
+    left: 0;
+    top: 15.03%;
+    text-align: center;
+    bottom: 108px;
+    
+  }
+  .content_box {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    width: 280px;
+    height: 550px;
+    left: 12.53%;
+  }
+
+  .answer_btn {
+    height: 57px;
+    width: 281px;
+  }
+ 
+}
+
 
 </style>
