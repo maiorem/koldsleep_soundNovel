@@ -1,19 +1,34 @@
 <template>
   <div class="background">
-    <QuestionFirst />
+    <div :is="currentComponent" :quiz-answer="quizAnswer"></div>
   </div>
 </template>
 
 <script>
 import QuestionFirst from '@/components/QuestionFirst.vue'
+import CorrectAnswer from '@/components/answers/CorrectAnswer.vue'
+import IncorrectOne from '@/components/answers/IncorrectOne.vue'
+import IncorrectTwo from '@/components/answers/IncorrectTwo.vue'
+import IncorrectThree from '@/components/answers/IncorrectThree.vue'
+import IncorrectFour from '@/components/answers/IncorrectFour.vue'
 
 export default {
   name: 'HomeMain',
-  props: {
-    msg: String
-  },
+  data: () => ({
+    currentComponent : 'questionFirst'
+  }),
   components: {
-    QuestionFirst,
+    'questionFirst' : QuestionFirst,
+    'incorrectOne' : IncorrectOne,
+    'incorrectTwo' : IncorrectTwo,
+    'incorrectThree' : IncorrectThree,
+    'incorrectFour' : IncorrectFour,
+    'correctAnswer' : CorrectAnswer,
+  },
+  methods: {
+    quizAnswer: function(component) {
+      this.currentComponent = component;
+    }
   }
 }
 </script>

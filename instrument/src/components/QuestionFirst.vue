@@ -4,11 +4,11 @@
       <div class="title_head">국립 음향 영재원 도서부 5월 퀴즈 이벤트</div>
       <div class="question">Q. 다음의 목록 중 음향 영재원 도서관에<br>가장 많이 대출된 도서는 무엇일까요?</div>
       <div class="answer-btn-area">
-      <button class="answer_btn"><div class="answers_box">① 천둥보다 크게, 진공보다 작게</div></button> <br>
-      <button class="answer_btn"><div class="answers_box">② 소리 포터와 비밀의 팡파레</div></button> <br>
-      <button class="answer_btn"><div class="answers_box">③ 조용히 혼자 놀 수 있는 301가지 방법</div></button> <br>
-      <button class="answer_btn"><div class="answers_box">④ 가장 개인적인 악기</div></button> <br>
-      <button class="answer_btn"><div class="answers_box">⑤ 원더랜드의 암호 학교 - 소리편</div></button> <br>
+        <button class="answer_btn" @click="quizAnswer('incorrectOne')" type="submit"><div class="answers_box">① 천둥보다 크게, 진공보다 작게</div></button> <br>
+        <button class="answer_btn" @click="quizAnswer('incorrectTwo')" type="submit"><div class="answers_box">② 소리 포터와 비밀의 팡파레</div></button> <br>
+        <button class="answer_btn" @click="quizAnswer('incorrectThree')" type="submit"><div class="answers_box">③ 조용히 혼자 놀 수 있는 301가지 방법</div></button> <br>
+        <button class="answer_btn" @click="quizAnswer('correctAnswer')" type="submit"><div class="answers_box">④ 가장 개인적인 악기</div></button> <br>
+        <button class="answer_btn" @click="quizAnswer('incorrectFour')" type="submit"><div class="answers_box">⑤ 원더랜드의 암호 학교 - 소리편</div></button> <br>
       </div>
       <div class="footer">정답을 맞힌 학생에게는 '도서관 야단법석 허가증'을 드립니다.<br>허가증 소유시 홈페이지 안에서 발생시키는 모든 소음을 용납합니다.</div>
     </div>
@@ -19,10 +19,10 @@
 
 
 export default {
-  name: 'QuestionFirst',
-  props: {
-    msg: String
-  }
+  name: 'questionFirst',
+  props : [
+    'quizAnswer'
+  ]
 }
 </script>
 
