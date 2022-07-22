@@ -3,7 +3,7 @@
     <div class="content_box">
         <div class="correct_answer">정답!</div>
         <div class="title_head">④ 가장 개인적인 악기</div>
-        <button class="enterance"  @click="quizAnswer('questionFirst')" type="submit"><div class="footer">도서관 입장</div></button>
+        <button class="enterance"  @click="quizAnswer('enteranceLibrary')" type="submit"><div class="footer">도서관 입장</div></button>
       </div>
   </div>
 </template>

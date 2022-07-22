@@ -11,6 +11,8 @@ import IncorrectOne from '@/components/answers/IncorrectOne.vue'
 import IncorrectTwo from '@/components/answers/IncorrectTwo.vue'
 import IncorrectThree from '@/components/answers/IncorrectThree.vue'
 import IncorrectFour from '@/components/answers/IncorrectFour.vue'
+import EnteranceLibrary from '@/components/musicLibrary/EnteranceLibrary.vue'
+
 
 export default {
   name: 'HomeMain',
@@ -24,6 +26,7 @@ export default {
     'incorrectThree' : IncorrectThree,
     'incorrectFour' : IncorrectFour,
     'correctAnswer' : CorrectAnswer,
+    'enteranceLibrary' : EnteranceLibrary,
   },
   methods: {
     quizAnswer: function(component) {
