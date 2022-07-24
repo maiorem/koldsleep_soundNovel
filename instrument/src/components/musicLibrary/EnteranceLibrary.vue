@@ -37,10 +37,7 @@ export default {
   name: 'enteranceLibrary',   
 }
 
-
-
 </script>
-<style src='vue-dialog-drag/dist/vue-dialog-drag.css'></style>
 <style scoled>
 #index_list {
   box-sizing: border-box;
