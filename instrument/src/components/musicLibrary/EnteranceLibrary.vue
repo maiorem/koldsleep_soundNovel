@@ -1,6 +1,6 @@
 <template>
   <div class="wrap">
-    <dialog-drag id="index_list" :options="{x : 143, y : 300}">
+    <div v-draggable id="index_list">
       <div class="content_box_list">
       <div class="novel_title"><v-img src="@/assets/img/dictionary.png" class="book_img"></v-img><div class="book_title">가장 개인적인 악기</div></div>
       <ul>
@@ -20,25 +20,24 @@
         <li><v-img src="@/assets/img/memo.png" class="book_img"></v-img>가짜여도 괜찮은</li>
       </ul>
       </div>
-    </dialog-drag>
-    <dialog-drag id="instrument_button" :options="{x : 419, y : 500}">
+    </div>
+    <div v-draggable id="instrument_button">
       <p> Test dialog</p>
-    </dialog-drag>
-    <dialog-drag id="personal_intru" :options="{x : 806, y : 100}">
+    </div>
+    <div v-draggable id="personal_intru">
       <p> Test dialog</p>
-    </dialog-drag>
+    </div>
   </div>
 </template>
 
 <script>
-import DialogDrag from 'vue-dialog-drag'
+
 
 export default {
-  name: 'enteranceLibrary',
-  components:{
-    DialogDrag,
-  },
+  name: 'enteranceLibrary',   
 }
+
+
 
 </script>
 <style src='vue-dialog-drag/dist/vue-dialog-drag.css'></style>
@@ -61,6 +60,9 @@ export default {
   border-radius: 20px;
 
   text-align: left;
+
+  left: 143px;
+  top: 300px;
 }
 
 #instrument_button {
@@ -77,6 +79,9 @@ export default {
   box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(40px);
   /* Note: backdrop-filter has minimal browser support */
+
+  left: 419px;
+  top: 500px;
 
 }
 
@@ -96,6 +101,9 @@ export default {
   /* Note: backdrop-filter has minimal browser support */
 
   border-radius: 20px;
+
+  left: 806px;
+  top: 100px;
 }
 
 .content_box_list {
@@ -106,6 +114,7 @@ export default {
   height: 365px;
   overflow-y: scroll;
   overflow-x: none;
+
 }
 
 .novel_title {
