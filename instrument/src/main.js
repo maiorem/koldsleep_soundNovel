@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
+
 import { DraggablePlugin, DraggableDirective } from '@braks/revue-draggable';
 
 Vue.config.productionTip = false
@@ -15,3 +16,4 @@ Vue.use(DraggablePlugin)
 
 // or
 Vue.directive('draggable', DraggableDirective)
+

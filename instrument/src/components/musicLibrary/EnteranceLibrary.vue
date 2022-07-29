@@ -34,8 +34,9 @@
 
 
 export default {
-  name: 'enteranceLibrary',   
+  name: 'enteranceLibrary',
 }
+
 
 </script>
 <style scoled>
