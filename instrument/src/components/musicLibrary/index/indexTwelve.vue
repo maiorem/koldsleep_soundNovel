@@ -216,8 +216,8 @@ export default {
 
   border-radius: 20px;
 
-  left: 806px;
-  top: 100px;
+  left: 306px;
+  top: 700px;
 
   text-align: center;
 }

@@ -145,8 +145,8 @@ export default {
 
   border-radius: 20px;
 
-  left: 806px;
-  top: 100px;
+  left: 406px;
+  top: 800px;
 
   text-align: center;
 }

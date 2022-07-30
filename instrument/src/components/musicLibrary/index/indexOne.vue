@@ -95,8 +95,8 @@ export default {
 
   border-radius: 20px;
 
-  left: 806px;
-  top: 100px;
+  left: 836px;
+  top: 110px;
 
   text-align: center;
 }

@@ -133,8 +133,8 @@ export default {
 
   border-radius: 20px;
 
-  left: 806px;
-  top: 100px;
+  left: 656px;
+  top: 350px;
 
   text-align: center;
 }

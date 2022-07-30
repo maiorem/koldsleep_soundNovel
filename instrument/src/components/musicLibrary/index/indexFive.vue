@@ -110,8 +110,8 @@ export default {
 
   border-radius: 20px;
 
-  left: 806px;
-  top: 100px;
+  left: 756px;
+  top: 150px;
 
   text-align: center;
 }
