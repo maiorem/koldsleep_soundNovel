@@ -21,9 +21,8 @@
       </ul>
       </div>
     </div>
-    <div v-draggable id="instrument_button">
-      <p> Test dialog</p>
-    </div>
+    <MusicBox v-draggable />
+    
     <PersonalInstrumentIntro v-draggable v-show="isShow[0]" v-on:btnclose="btnClose(0)"/>
     <indexOne v-draggable v-show="isShow[1]"  v-on:btnclose="btnClose(1)" />
     <indexTwo v-draggable v-show="isShow[2]"  v-on:btnclose="btnClose(2)" />
@@ -59,12 +58,15 @@ import indexTwelve from '@/components/musicLibrary/index/indexTwelve.vue'
 import indexThirteen from '@/components/musicLibrary/index/indexThirteen.vue'
 import indexFourteen from '@/components/musicLibrary/index/indexFourteen.vue'
 
+import MusicBox from '@/components/musicLibrary/musicbox/MusixBox.vue'
+
 export default {
   name: 'enteranceLibrary',
   components: {
     PersonalInstrumentIntro,
     indexOne, indexTwo, indexThree,indexFour, indexFive, indexSix, indexSeven, indexEight, indexNine,
-    indexTen, indexEleven, indexTwelve, indexThirteen, indexFourteen
+    indexTen, indexEleven, indexTwelve, indexThirteen, indexFourteen,
+    MusicBox
   },
   data() {
     return {
@@ -125,25 +127,6 @@ export default {
   top: 300px;
 }
 
-#instrument_button {
-  box-sizing: border-box;
-
-  position: absolute;
-  height: 374px;
-  width: 336px;
-
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-
-  background: rgba(26, 26, 26, 0.9);
-  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(40px);
-  /* Note: backdrop-filter has minimal browser support */
-
-  left: 419px;
-  top: 500px;
-
-}
 
 
 .content_box_list {
