@@ -2,7 +2,7 @@
   <div class="wrap">
     <div v-draggable id="index_list">
       <div class="content_box_list">
-      <div class="novel_title"><v-img src="@/assets/img/dictionary.png" class="book_img"></v-img><div class="book_title">가장 개인적인 악기</div></div>
+      <div class="novel_title" @click="showIntroComp"><v-img src="@/assets/img/dictionary.png" class="book_img"></v-img><div class="book_title">가장 개인적인 악기</div></div>
       <ul>
         <li><v-img src="@/assets/img/memo.png" class="book_img"></v-img>꿈을 오갈 때는 빈손으로</li>
         <li><v-img src="@/assets/img/memo.png" class="book_img"></v-img>고래의 아이</li>
@@ -24,17 +24,33 @@
     <div v-draggable id="instrument_button">
       <p> Test dialog</p>
     </div>
-    <div v-draggable id="personal_intru">
-      <p> Test dialog</p>
-    </div>
+    <PersonalInstrumentIntro v-draggable v-show="isShow" v-on:btnclose="btnClose"/>
   </div>
 </template>
 
 <script>
-
+import PersonalInstrumentIntro from '@/components/musicLibrary/index/PersonalInstrumentIntro.vue'
 
 export default {
   name: 'enteranceLibrary',
+  components: {
+    PersonalInstrumentIntro,
+  },
+  data() {
+    return {
+      isShow : false
+    }
+  },
+  methods: {
+    showIntroComp() {
+      if (!this.isShow) {
+        this.isShow = true;
+      } 
+    },
+    btnClose() {
+      this.isShow = false;
+    }
+  }
 }
 
 
@@ -83,26 +99,6 @@ export default {
 
 }
 
-#personal_intru {
-  box-sizing: border-box;
-
-  position: absolute;
-  height: 649px;
-  width: 500px;
-
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.6);
-
-  background: rgba(26, 26, 26, 0.9);
-  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(40px);
-  /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 20px;
-
-  left: 806px;
-  top: 100px;
-}
 
 .content_box_list {
   position: relative;
@@ -129,6 +125,8 @@ export default {
   height: 27px;
 
   margin-bottom: 13px;
+
+  cursor: pointer;
 }
 
 .book_title {
@@ -163,6 +161,7 @@ ul {
 
 li {
   margin: 13px 0;
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {
