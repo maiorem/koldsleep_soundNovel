@@ -88,8 +88,10 @@ export default {
 }
 </script>
 
-<style coped>
-
+<style scoped>
+::-webkit-scrollbar {
+display: none;
+}
 
 #instrument_button {
   box-sizing: border-box;

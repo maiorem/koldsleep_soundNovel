@@ -58,8 +58,10 @@ export default {
 }
 </script>
 
-<style coped>
-
+<style scoped>
+::-webkit-scrollbar {
+display: none;
+}
 
 #personal_intru {
   box-sizing: border-box;

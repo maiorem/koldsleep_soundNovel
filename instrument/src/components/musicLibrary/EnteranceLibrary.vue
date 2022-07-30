@@ -103,7 +103,7 @@ export default {
 
 
 </script>
-<style scoled>
+<style scoped>
 #index_list {
   box-sizing: border-box;
 
