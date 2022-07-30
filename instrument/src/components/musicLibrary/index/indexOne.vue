@@ -69,7 +69,7 @@ export default {
   name: 'index_one',
   methods: {
     close() {
-        // this.$emit("btnclose");
+        this.$emit("btnclose");
     }
   }
 }
