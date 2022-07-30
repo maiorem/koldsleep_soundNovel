@@ -15,8 +15,8 @@
         <li @click="showComp(9)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>버튼 하나를 눌러 타인의 꿈을 삭제하시겠습니까?</li>
         <li @click="showComp(10)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>스트로베리 캔디</li>
         <li @click="showComp(11)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>침입자에게는 문 너머가 없다</li>
-        <li @click="showComp(12)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>이 꿈은 갑자기 제 머릿속으로 쏙 들어왔음을 명시합니다.</li>
-        <li @click="showComp(13)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>세상에서 가장 개인적인 악기</li>
+        <li @click="showComp(12)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>세상에서 가장 개인적인 악기</li>
+        <li @click="showComp(13)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>이 꿈은 갑자기 제 머릿속으로 쏙 들어왔음을 명시합니다.</li>
         <li @click="showComp(14)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>가짜여도 괜찮은</li>
       </ul>
       </div>
