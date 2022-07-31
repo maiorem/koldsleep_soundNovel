@@ -64,7 +64,9 @@
     </div>
 </template>
 <script>
-import fingerQuestionPlay from '@/assets/sounds/voice/KS_voice_48.wav' //질문하는 연극 손가락
+import store from "@/store/index.js";
+
+
 
 export default {
 
@@ -77,11 +79,11 @@ methods: {
         this.$emit("btnclose");
     },
     play() {
-        var sound = new Audio(fingerQuestionPlay);
-        sound.play();
+        store.commit("toggleText", 1)
     }
     
-  }
+  },
+  
 }
 </script>
 

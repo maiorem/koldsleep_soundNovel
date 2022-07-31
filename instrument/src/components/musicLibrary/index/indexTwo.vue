@@ -102,7 +102,7 @@
     </div>
 </template>
 <script>
-import finger1 from '@/assets/sounds/voice/KS_voice_11.wav' //도망가는 희망손
+import store from "@/store/index.js";
 
 export default {
   name: 'index_two',
@@ -112,11 +112,11 @@ export default {
     },
     play(message) {
 
-        const audio1 = new Audio(finger1);
+        // const audio1 = new Audio(finger1);
 
         switch(message) {
             case '희망' :      
-                audio1.play();
+                store.commit("toggleText", 2)
                 break; 
             case "메아리" :
                 break;

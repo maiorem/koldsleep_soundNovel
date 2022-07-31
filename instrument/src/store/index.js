@@ -4,11 +4,11 @@ import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex)
 
-import musixbox from '@/store/modules/musicbox.js'
+import musicbox from '@/store/modules/musicbox.js'
 
 const store = new Vuex.Store({
     modules: {
-        musixbox,
+        musicbox,
     },
     plugins: [createPersistedState()]
 })
