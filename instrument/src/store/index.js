@@ -4,16 +4,13 @@ import createPersistedState from 'vuex-persistedstate';
 
 Vue.use(Vuex)
 
-import musicStore from '@/store/modules/musicbox.js'
+import musixbox from '@/store/modules/musicbox.js'
 
 const store = new Vuex.Store({
     modules: {
-        musicStore: musicStore,
+        musixbox,
     },
-    //vuex plugin 명시
-    plugins: [createPersistedState({
-        paths: ["enteranceLibrary"]
-    })]
+    plugins: [createPersistedState()]
 })
 
 export default store

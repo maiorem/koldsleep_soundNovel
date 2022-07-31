@@ -56,7 +56,7 @@
 이리에가 주장한 명칭 ‘연구원’은 낯선 것이 아니다. 하지만 개인이 표백되는 이름이었다. 꿈에 진입하는 속성과 닮기도 했다. 꿈의 영역에 들어갈 때 인간은 지나온 역사의 꼬리를 두고 꿈꾸는 사람의 몸만 간다. 어떤 것도 가져다두거나 들고 돌아오지 않는다. 연구자로서의 우리도 같을 예정이다. 
 <br>
 <br>
-꿈과 소리를 연구하는 우리의 연구실은 하얀색이다. 하얀색은 모든 변수에서도 우아하다. 뭘 두어도 잘 어울린다. 홀로 있을 때의 입지가 머쓱해지면, 사실 처음부터 나는 나에게 얹어지는 모든 대상을 비추기 위해 존재했다는 변명이 가능하다. 어느 화풍의 작가라도 다 기다려주는 전시 대여공간처럼. 혹은 그 위를 거쳐 간 모든 연극에도 불구하고 언제나 빈자리로만 존재하는 무대처럼. 인간들의 꿈이 장면과 소리로 스쳤다가 사라져버리는 백색의 연구실을 상상한다. 이곳은 모두를 위한 장소가 될 수 있다. 동시에 누구도 위하지 않는다. 
+꿈과 소리를 연구하는 우리의 연구실은 하얀색이다. 하얀색은 모든 변수에서도 우아하다. 뭘 두어도 잘 어울린다. 홀로 있을 때의 입지가 머쓱해지면, 사실 처음부터 나는 나에게 얹어지는 모든 대상을 비추기 위해 존재했다는 변명이 가능하다. 어느 화풍의 작가라도 다 기다려주는 전시 대여공간처럼. 혹은 그 위를 거쳐 간 모든 <span class="sound-text" @click="play">연극</span>에도 불구하고 언제나 빈자리로만 존재하는 무대처럼. 인간들의 꿈이 장면과 소리로 스쳤다가 사라져버리는 백색의 연구실을 상상한다. 이곳은 모두를 위한 장소가 될 수 있다. 동시에 누구도 위하지 않는다. 
 <br>
 <br>
             </div>
@@ -64,21 +64,59 @@
     </div>
 </template>
 <script>
+import fingerQuestionPlay from '@/assets/sounds/voice/KS_voice_48.wav' //질문하는 연극 손가락
 
 export default {
-  name: 'index_one',
-  methods: {
+
+   
+name: 'index_one',
+
+
+methods: {
     close() {
         this.$emit("btnclose");
+    },
+    play() {
+        var sound = new Audio(fingerQuestionPlay);
+        sound.play();
     }
+    
   }
 }
 </script>
 
-<style scoped>
+<style>
+
 ::-webkit-scrollbar {
-display: none;
+    display: none;
 }
+
+.sound-text {
+  filter: blur(10px);
+  -webkit-filter: blur(3px); 
+  cursor: pointer;
+}
+
+.sound-text:active {
+    filter: blur(10px);
+    -webkit-filter: blur(1px); 
+
+    text-decoration-line: underline;
+
+    color: #8F8F8F;
+}
+.sound-text:visited {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+
+    text-decoration-line: underline;
+
+    color: #8F8F8F;
+}
+
+</style>
+
+<style scoped>
 
 #personal_intru {
   box-sizing: border-box;
