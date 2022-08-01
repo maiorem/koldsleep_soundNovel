@@ -102,7 +102,9 @@
     </div>
 </template>
 <script>
+import eventBus from '@/assets/eventbus.js'
 import store from "@/store/index.js";
+
 
 export default {
   name: 'index_two',
@@ -117,6 +119,7 @@ export default {
         switch(message) {
             case '희망' :      
                 store.commit("toggleText", 2)
+                eventBus.$emit("iconUsable", 2); 
                 break; 
             case "메아리" :
                 break;

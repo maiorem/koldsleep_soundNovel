@@ -64,25 +64,23 @@
     </div>
 </template>
 <script>
+import eventBus from '@/assets/eventbus.js'
 import store from "@/store/index.js";
 
 
-
 export default {
-
    
-name: 'index_one',
-
-
-methods: {
-    close() {
-        this.$emit("btnclose");
+    name: 'index_one',
+    methods: {
+        close() {
+            this.$emit("btnclose");
+        },
+        play() {
+            store.commit("toggleText", 1);
+            eventBus.$emit("iconUsable", 1); 
+        }
+        
     },
-    play() {
-        store.commit("toggleText", 1)
-    }
-    
-  },
   
 }
 </script>

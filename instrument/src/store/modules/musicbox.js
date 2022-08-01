@@ -71,93 +71,6 @@ const getters = {
     }
 };
 
-const actions = {
-
-    loadIcons(state) {
-        return state.musicIcons;
-    },
-
-    // loadIcon: (state) => (num) => {
-    //     return state.musicIcons[num].usable;
-    // },
-
-    toggleText(state, iconNum) {
-
-        const audio = new Audio(state.musicIcons[iconNum].src);
-
-        console.log("toggle text : " + iconNum);
-        
-        // 해당 텍스트 아이콘이 활성화가 안된 상태라면 활성화
-        if (state.musicIcons[iconNum].usable != "active") {
-            state.musicIcons[iconNum].usable = "active";
-            console.log("toggle text : " + state.musicIcons[iconNum].usable);
-            audio.play();
-
-
-        // 해당 텍스트 아이콘이 활성화 상태라면 멈춤
-        } else if (state.musicIcons[iconNum].usable == "active") {
-            state.musicIcons[iconNum].usable = "stop";
-            console.log("toggle text : " + state.musicIcons[iconNum].usable);
-            audio.pause();
-        } 
-       
-    },
-
-    // 아이콘 클릭
-    toggleIcon(state, iconNum) {
-
-        const audio = new Audio(state.musicIcons[iconNum].src);
-
-        console.log("toggle icon : " + iconNum);
-        
-
-        // 해당 텍스트 아이콘이 활성화인 상태면 멈춤 (흰배경)
-        if (state.musicIcons[iconNum].usable == "active") {
-            state.musicIcons[iconNum].usable = "stop";
-            console.log("toggle icon : " + state.musicIcons[iconNum].usable);
-            audio.pause();
-            
-
-        // 해당 텍스트 아이콘이 멈춤상태면 다시 활성화
-        } else if (state.musicIcons[iconNum].usable == "stop") {
-            state.musicIcons[iconNum].usable = "active";
-            console.log("toggle icon : " + state.musicIcons[iconNum].usable);
-            audio.play();
-
-        // 비활성화 상태면 emptyIcon()    
-        } else {
-            this.emptyIcon();
-        }
-    },
-
-    // 빈 아이콘 클릭
-    emptyIcon() {
-        console.log("empty icon");
-
-    },
-    
-
-
-
-    // 비활성화가 아닌 아이콘 전체 재생
-    allPlay() {
-
-    },
-
-    // 전체 멈춤
-    allStop() {
-
-    },
-
-    // 저장된 음악 리셋
-    allReset() {
-        localStorage.clear();
-
-    }
-
-
-}
-
 
 const mutations = {
 
@@ -174,7 +87,7 @@ const mutations = {
             state.musicIcons[iconNum].usable = "active";
             console.log("toggle text : " + state.musicIcons[iconNum].usable);
             audio.play();
-
+            
 
         // 해당 텍스트 아이콘이 활성화 상태라면 멈춤
         } else if (state.musicIcons[iconNum].usable == "active") {
@@ -205,6 +118,7 @@ const mutations = {
             state.musicIcons[iconNum].usable = "active";
             console.log("toggle icon : " + state.musicIcons[iconNum].usable);
             audio.play();
+            
 
         // 비활성화 상태면 emptyIcon()    
         } else {
@@ -241,5 +155,5 @@ const mutations = {
 
 
 export default {
-    state, getters, actions, mutations
+    state, getters, mutations
 };

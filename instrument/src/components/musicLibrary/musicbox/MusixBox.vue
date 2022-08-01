@@ -81,9 +81,9 @@
     </div>
 </template>
 <script>
+import eventBus from '@/assets/eventbus.js'
 import store from "@/store/index.js";
 
-console.log('test : '+store.getters['getMusicIconUsable'](1));
 
 export default {
   name: 'musicBox',
@@ -97,11 +97,16 @@ export default {
     }
   },
   created() {
-    store.dispatch('loadIcons')
+    eventBus.$on('iconUsable', this.receive);
   },
   methods : {
     play(num) {
-        store.commit("toggleIcon", num)
+        store.commit("toggleIcon", num);
+        this.classStates[num] = store.getters['getMusicIconUsable'](num);
+    },
+    receive(num) {
+        console.log("receive : " + num);
+        this.classStates[num] = store.getters['getMusicIconUsable'](num);
     }
   },
 
