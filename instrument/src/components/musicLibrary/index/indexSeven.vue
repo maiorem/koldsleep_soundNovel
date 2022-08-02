@@ -88,6 +88,7 @@
 </template>
 <script>
 
+
 export default {
   name: 'index_seven',
   methods: {

@@ -24,7 +24,7 @@
 그는 그렇게 생각하면서도, 멀리 뻗어간 식물들의 청각기관이 어디쯤인지 그들의 해부도에 아이패드로 동그라미를 그렸다. 그리고 옆에 메모했다. 소리뼈.
 <br>
 <br>
-뼈유칼립투스 나무와 뼈율마만이 평온하게 곧추서있었다. 그들의 잎은 청각기관의 연골을 가지도록 진화되기에는 너무 여렸기 때문이다. 둘은 아무것도 듣지 못한 채 자리를 지켰다. 그래도 연구자 3은 여전히 움직이지 못하는 둘을 소중하게 돌봤다. 
+뼈유칼립투스 나무와 뼈율마만이 평온하게 곧추서있었다. 그들의 잎은 청각기관의 연골을 가지도록 진화되기에는 너무 여렸기 때문이다. 둘은 아무것도 듣지 못한 채 자리를 지켰다. 그래도 연구자 3은 <span class="sound-text" @click="play('옆구리')">여전히 움직이지 못하는</span> 둘을 소중하게 돌봤다. 
 <br>
 <br>
 <br>
@@ -85,12 +85,24 @@
     </div>
 </template>
 <script>
+import eventBus from '@/assets/eventbus.js'
+import store from "@/store/index.js";
 
 export default {
   name: 'index_six',
   methods: {
     close() {
         this.$emit("btnclose");
+    },
+    play(message) {
+
+        switch(message) {
+            case '옆구리' :      
+                store.commit("toggleText", 14)
+                eventBus.$emit("iconUsable", 14); 
+                break; 
+            
+        }
     }
   }
 }

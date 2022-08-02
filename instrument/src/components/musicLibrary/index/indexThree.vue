@@ -6,7 +6,7 @@
         <div class="content-wrap">
             <div class="title"><p>누가 잠들고 누가 잠들지 않았는가</p></div>
             <div class="content">
-                음향원의 교실과 복도 벽에는 흡음재가 시공되어 있다. 또, 우리 학교에서는 뭔가에 호응할 때 함성을 지르거나 박수 박수치는 위원 목소리
+                음향원의 교실과 복도 벽에는 흡음재가 시공되어 있다. 또, 우리 학교에서는 뭔가에 호응할 때 함성을 지르거나 <span class="sound-text" @click="play('박수')">박수</span> 박수치는 위원 목소리
 를 치지 않는다. 지역 국회의원 축사 순서마저도 학교로부터의 호응 강요가 없었다. 우리의 고요함에 민망해하는 그에게 보좌관이 귀띔해주는 모습이 보였다. “청각들이 예민해서 박수소리가 폭발음처럼 들린답니다.” 스탠딩 마이크로 미약하게 귓속말이 샜다. 아주 얇은 실선 한 줄처럼.
 <br>
 <br>
@@ -54,7 +54,7 @@
 “이리로 와.”
 <br>
 <br>
-학년부장 선생님과 김이리에가 서있었다. 걔는 나를 등졌고, 선생님이 나를 발견했다. 그리고는 손짓했다. 그때서야 이리에도 돌아봤다.
+학년부장 선생님과 김이리에가 서있었다. <span class="sound-text" @click="play('등졌고')">걔는 나를 등졌고</span>, 선생님이 나를 발견했다. 그리고는 손짓했다. 그때서야 이리에도 돌아봤다.
 <br>
 <br>
 “선우가 3반 몇 번이지?”
@@ -128,12 +128,27 @@
     </div>
 </template>
 <script>
+import eventBus from '@/assets/eventbus.js'
+import store from "@/store/index.js";
 
 export default {
   name: 'index_three',
   methods: {
     close() {
         this.$emit("btnclose");
+    },
+    play(message) {
+
+        switch(message) {
+            case '박수' :      
+                store.commit("toggleText", 4)
+                eventBus.$emit("iconUsable", 4); 
+                break; 
+            case "등졌고" :
+                store.commit("toggleText", 5)
+                eventBus.$emit("iconUsable", 5); 
+                break;
+        }
     }
   }
 }

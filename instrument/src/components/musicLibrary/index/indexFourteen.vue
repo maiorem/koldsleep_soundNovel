@@ -30,7 +30,7 @@
 김이리에가 웃었다. 
 <br>
 <br>
-“보이지 않아도 찾아낼 수 있다면 좋겠지만, 모든 일은 서로가 존재한다는 걸 알아채고 시작되잖아.”
+“보이지 않아도 <span class="sound-text" @click="play('좋겠지')">찾아낼 수 있다면 좋겠지만</span>, 모든 일은 서로가 존재한다는 걸 알아채고 시작되잖아.”
 <br>
 <br>
 컴컴한 골목을 함께 걸으며, 나는 김이리에 등 뒤로 투명한 목소리들이 꼬리처럼 따라붙는 모습을 상상했다. 가려낼 수 있는 안목이 없어 온갖 백귀들의 영혼을 불러들이고야 마는 서투른 영매처럼.
@@ -56,12 +56,24 @@
     </div>
 </template>
 <script>
+import eventBus from '@/assets/eventbus.js'
+import store from "@/store/index.js";
 
 export default {
   name: 'index_fourteen',
   methods: {
     close() {
         this.$emit("btnclose");
+    },
+    play(message) {
+
+        switch(message) {
+            case '좋겠지' :      
+                store.commit("toggleText", 54)
+                eventBus.$emit("iconUsable", 54); 
+                break; 
+            
+        }
     }
   }
 }

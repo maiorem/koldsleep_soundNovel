@@ -39,7 +39,7 @@
 어떤 꿈들은 잡으려도 결코 잡히지 않는다. 버튼 하나를 눌러 타인의 꿈을 삭제한 사람에게도 같은 역할을 해줄 해커가 필요할지 궁금하다. 당신의 뜻에 동의하는 바입니다. 꿈이 뭐가 그렇게 중요하겠습니까…. 자는 동안 뇌가 혼자 주물러놓은 찰흙놀이 같은 거지. 
 <br>
 <br>
-하지만 이후로도 나는 자주 꿈을 꾸면서 더운 땀을 흘린다. 꿈을 꾸는 날은 형체 없는 대상에 화가 난 채로 깨어난다. 나를 행복하게 해줄 마음이 없는 무의식 같은 건, 나가서 죽어버리는 편이 좋아. 네가 이러면 안 되잖아. 너까지 나한테 이러면 안 되잖아. 거울을 사납게 바라보는 심정으로 다섯 손가락을 오므려 주먹을 쥐어본다. 나는 매일 밤 형체가 없는 유실물의 마지막 증거로서 살아간다. 
+하지만 이후로도 나는 자주 꿈을 꾸면서 더운 땀을 흘린다. 꿈을 꾸는 날은 형체 없는 대상에 <span class="sound-text" @click="play('분노')">화가 난 채로 깨어난다.</span> 나를 행복하게 해줄 마음이 없는 무의식 같은 건, 나가서 죽어버리는 편이 좋아. 네가 이러면 안 되잖아. 너까지 나한테 이러면 안 되잖아. 거울을 사납게 바라보는 심정으로 다섯 손가락을 오므려 <span class="sound-text" @click="play('주먹')">주먹을 쥐어본다.</span> 나는 매일 밤 형체가 없는 <span class="sound-text" @click="play('유실')">유실물</span>의 마지막 증거로서 살아간다. 
 <br>
 <br>            
             </div>
@@ -47,12 +47,31 @@
     </div>
 </template>
 <script>
+import eventBus from '@/assets/eventbus.js'
+import store from "@/store/index.js";
 
 export default {
   name: 'index_eight',
   methods: {
     close() {
         this.$emit("btnclose");
+    },
+    play(message) {
+
+        switch(message) {
+            case '분노' :      
+                store.commit("toggleText", 19)
+                eventBus.$emit("iconUsable", 19); 
+                break; 
+            case "주먹" :
+                store.commit("toggleText", 20)
+                eventBus.$emit("iconUsable", 20); 
+                break;
+            case "유실" :
+                store.commit("toggleText", 21)
+                eventBus.$emit("iconUsable", 21); 
+                break;
+        }
     }
   }
 }

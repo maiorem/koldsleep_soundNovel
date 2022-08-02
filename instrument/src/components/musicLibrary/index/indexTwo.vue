@@ -114,14 +114,14 @@ export default {
     },
     play(message) {
 
-        // const audio1 = new Audio(finger1);
-
         switch(message) {
             case '희망' :      
                 store.commit("toggleText", 2)
                 eventBus.$emit("iconUsable", 2); 
                 break; 
             case "메아리" :
+                store.commit("toggleText", 3)
+                eventBus.$emit("iconUsable", 3); 
                 break;
         }
     }
