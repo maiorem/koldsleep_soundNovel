@@ -153,15 +153,36 @@ export default {
   created() {
     eventBus.$on('iconUsable', this.receive);
   },
+  computed : {
+    getMusicIcons() {
+        return store.getters['getMusicIcons']
+    }
+  },
+  watch : {
+    getMusicIcons(newVal, oldVal) {
+        console.log(`${oldVal} to ${newVal}`)
+    }
+  },
   methods : {
 
     play(num) {
         //비활성 버튼을 클릭한 경우
         if (store.getters['getMusicIconUsable'](num) == 'disabled') {
             this.empty()
+
+        } else if (store.getters['getMusicIconUsable'](num) == 'stop') {
+            // 스톱상태로 버튼 누르면 active
+            store.commit("toggleIcon", num);
+            console.log("play restart")
+            this.classStates[num] = store.getters['getMusicIconUsable'](num);
+
+        } else if (store.getters['getMusicIconUsable'](num) == 'active') {
+            //active 상태로 버튼 누르면 stop
+            store.commit("toggleIconStop", num);
+            console.log("play stop")
+            this.classStates[num] = store.getters['getMusicIconUsable'](num);
         }
-        store.commit("toggleIcon", num);
-        this.classStates[num] = store.getters['getMusicIconUsable'](num);
+        
     },
     receive(num) {
         console.log("receive : " + num);

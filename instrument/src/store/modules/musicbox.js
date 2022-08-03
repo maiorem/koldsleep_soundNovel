@@ -127,72 +127,79 @@ const getters = {
     }
 };
 
+var audios = [];
+var i;
+for (i=0; i<55; i++) {
+    audios.push(new Audio(state.musicIcons[i+1].src))
+}
+
+
 
 const mutations = {
 
     
-    // 텍스트 클릭
+    // 텍스트 클릭 (활성화)
     toggleText(state, iconNum) {
-
-        const audio = new Audio(state.musicIcons[iconNum].src);
-
-        console.log("toggle text : " + iconNum);
         
-        // 해당 텍스트 아이콘이 활성화가 안된 상태라면 활성화
-        if (state.musicIcons[iconNum].usable != "active") {
-            state.musicIcons[iconNum].usable = "active";
-            console.log("toggle text : " + state.musicIcons[iconNum].usable);
-            audio.play();
+        state.musicIcons[iconNum].usable = "active";
+        console.log("toggle text active : " + state.musicIcons[iconNum].usable);
+        audios[iconNum-1].play();
+        audios[iconNum-1].loop = true;
             
-
-        // 해당 텍스트 아이콘이 활성화 상태라면 멈춤
-        } else if (state.musicIcons[iconNum].usable == "active") {
-            state.musicIcons[iconNum].usable = "stop";
-            console.log("toggle text : " + state.musicIcons[iconNum].usable);
-            audio.pause();
-        } 
-       
     },
+
 
     // 아이콘 클릭
     toggleIcon(state, iconNum) {
 
-        const audio = new Audio(state.musicIcons[iconNum].src);
-
         console.log("toggle icon : " + iconNum);
-        
+        state.musicIcons[iconNum].usable = "active";
+        console.log("toggle icon active: " + state.musicIcons[iconNum].usable);
+        audios[iconNum-1].play();
+        audios[iconNum-1].loop = true;
 
-        // 해당 텍스트 아이콘이 활성화인 상태면 멈춤 (흰배경)
-        if (state.musicIcons[iconNum].usable == "active") {
-            state.musicIcons[iconNum].usable = "stop";
-            console.log("toggle icon : " + state.musicIcons[iconNum].usable);
-            audio.pause();
-            
-
-        // 해당 텍스트 아이콘이 멈춤상태면 다시 활성화
-        } else if (state.musicIcons[iconNum].usable == "stop") {
-            state.musicIcons[iconNum].usable = "active";
-            console.log("toggle icon : " + state.musicIcons[iconNum].usable);
-            audio.play();
-            
-
-        } 
     },
 
-    
+    toggleIconStop(state, iconNum) {
+        state.musicIcons[iconNum].usable = "stop";
+        console.log("toggle icon stop : " + state.musicIcons[iconNum].usable);
+        audios[iconNum-1].pause();
+        audios[iconNum-1].loop = false;
+
+    },
 
     // 비활성화가 아닌 아이콘 전체 재생
     allPlay() {
+        Object.keys(state.musicIcons).map((key) => {
+            console.log(key);
+            console.log(state.musicIcons[key]);
+            // if (icon[key].usable == 'stop' || icon[key].usable == 'active') {
+            //     icon[key].usable = 'active'
+            //     console.log("all play")
+            //     console.log(state.musicIcons[key])
+            //     audios[key-1].play()
+            // }
+        })
 
     },
 
     // 전체 멈춤
     allStop() {
+        console.log("all stop")
+        Object.keys(state.musicIcons).map((key) => {
+            if (state.musicIcons[key].usable == 'stop' || state.musicIcons[key].usable == 'active') {
+                state.musicIcons[key].usable = 'stop'
+                audios[key-1].pause()
+            }
+        })
 
     },
 
     // 저장된 음악 리셋
     allReset() {
+        Object.keys(state.musicIcons).map((key) => {
+            state.musicIcons[key].usable = 'disabled'
+        })
         localStorage.clear();
 
     }
