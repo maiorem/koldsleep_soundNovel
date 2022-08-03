@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify'
+import vClickOutside from 'v-click-outside'
 
 import { DraggablePlugin, DraggableDirective } from '@braks/revue-draggable';
 
@@ -16,4 +17,5 @@ Vue.use(DraggablePlugin)
 
 // or
 Vue.directive('draggable', DraggableDirective)
+Vue.directive('clickOutside', vClickOutside.directive)
 

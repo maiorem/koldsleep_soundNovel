@@ -71,8 +71,8 @@
                     <td @click="play(52)" :class="{'sound' : classStates[52] === 'disabled', sound_active : classStates[52] === 'active', sound_pause : classStates[52] === 'stop' }"></td>
                     <td @click="play(53)" :class="{'sound' : classStates[53] === 'disabled', sound_active : classStates[53] === 'active', sound_pause : classStates[53] === 'stop' }"></td>
                     <td @click="play(54)" :class="{'sound' : classStates[54] === 'disabled', sound_active : classStates[54] === 'active', sound_pause : classStates[54] === 'stop' }"></td>
-                    <td class="play"><v-img class="playbtn" src="@/assets/img/playButton.png"></v-img></td>
-                    <td class="stop"><v-img class="stopbtn" src="@/assets/img/stopButton.png"></v-img></td>
+                    <td @click="allPlay" class="play"><v-img class="playbtn" src="@/assets/img/playButton.png"></v-img></td>
+                    <td @click="allStop" class="stop"><v-img class="stopbtn" src="@/assets/img/stopButton.png"></v-img></td>
                 </tr>
             </table>
 
@@ -154,15 +154,35 @@ export default {
     eventBus.$on('iconUsable', this.receive);
   },
   methods : {
+
     play(num) {
+        //비활성 버튼을 클릭한 경우
+        if (store.getters['getMusicIconUsable'](num) == 'disabled') {
+            this.empty()
+        }
         store.commit("toggleIcon", num);
         this.classStates[num] = store.getters['getMusicIconUsable'](num);
     },
     receive(num) {
         console.log("receive : " + num);
         this.classStates[num] = store.getters['getMusicIconUsable'](num);
-    }
-  },
+    },
+    //비활성 버튼을 클릭한 경우
+    empty() {
+        console.log("empty Button!!!");
+        this.$emit("emptyEvent");
+    },
+    allPlay() {
+        store.commit("allPlay");
+    },
+    allStop() {
+        store.commit("allStop");
+    },
+    reset() {
+        store.commit("allReset");
+    },
+}
+  
 
 }
 </script>

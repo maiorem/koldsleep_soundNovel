@@ -176,20 +176,10 @@ const mutations = {
             audio.play();
             
 
-        // 비활성화 상태면 emptyIcon()    
-        } else {
-            this.emptyIcon();
-        }
+        } 
     },
 
-    // 빈 아이콘 클릭
-    emptyIcon() {
-        console.log("empty icon");
-
-    },
     
-
-
 
     // 비활성화가 아닌 아이콘 전체 재생
     allPlay() {

@@ -21,7 +21,7 @@
       </ul>
       </div>
     </div>
-    <MusicBox v-draggable />
+    <MusicBox v-draggable  v-on:emptyEvent="emptyEvent" v-click-outside="onClickOutside"/>
     
     <PersonalInstrumentIntro v-draggable v-show="isShow[0]" v-on:btnclose="btnClose(0)"/>
     <indexOne v-draggable v-show="isShow[1]"  v-on:btnclose="btnClose(1)" />
@@ -38,7 +38,14 @@
     <indexTwelve v-draggable v-show="isShow[12]"  v-on:btnclose="btnClose(12)" />
     <indexThirteen v-draggable v-show="isShow[13]"  v-on:btnclose="btnClose(13)" />
     <indexFourteen v-draggable v-show="isShow[14]"  v-on:btnclose="btnClose(14)" />
+    <div v-show="emptyState" class="emptyBox">
+      <div class="textBox">
+        채널헤드의 목소리를 발견하고<br>
+        그들이 서로를 알아채게 만들어주세요.
+      </div>
+    </div>
   </div>
+  
 </template>
 
 <script>
@@ -86,7 +93,8 @@ export default {
         12:false,
         13:false,
         14:false,
-      }
+      },
+      emptyState : false
     }
   },
   methods: {
@@ -97,6 +105,17 @@ export default {
     },
     btnClose(index) {
       this.isShow[index] = false;
+    },
+    emptyEvent() {
+      console.log("receive empty state!!!");
+      this.emptyState = true
+    },
+    onClickOutside() {
+      if (this.emptyState == true) {
+        console.log("close!");
+        this.emptyState = !this.emptyState
+      }
+      
     }
   }
 }
@@ -104,6 +123,34 @@ export default {
 
 </script>
 <style scoped>
+
+.emptyBox {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 34.79%;
+  top: 30.03%;
+
+  background: radial-gradient(50% 50% at 50% 50%, #000000 0%, rgba(0, 0, 0, 0) 100%);
+  background-blend-mode: multiply;
+  mix-blend-mode: normal;
+
+  text-align: center;
+}
+
+.textBox{
+  position: relative;
+  top: 220px;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 0px 0px 30px #1573A9;
+}
+
 #index_list {
   box-sizing: border-box;
 
