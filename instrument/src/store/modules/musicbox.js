@@ -175,6 +175,7 @@ const mutations = {
             if (object.musicIcons[key].usable == 'stop' || object.musicIcons[key].usable == 'active') {
                 state.musicIcons[key].usable = 'active'
                 audios[key-1].play()
+                audios[key-1].loop = true
             }
         })
 
@@ -187,6 +188,7 @@ const mutations = {
             if (state.musicIcons[key].usable == 'stop' || state.musicIcons[key].usable == 'active') {
                 state.musicIcons[key].usable = 'stop'
                 audios[key-1].pause()
+                audios[key-1].loop = false
             }
         })
 
