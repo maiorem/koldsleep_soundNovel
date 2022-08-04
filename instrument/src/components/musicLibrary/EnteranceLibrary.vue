@@ -1,5 +1,8 @@
 <template>
   <div class="wrap">
+    <div class="cat_box">
+      <v-img class="cat_love" src="@/assets/img/sanho.png"></v-img>
+    </div>
     <div v-draggable id="index_list">
       <div class="content_box_list">
       <div class="novel_title" @click="showComp(0)"><v-img src="@/assets/img/dictionary.png" class="book_img"></v-img><div class="book_title">가장 개인적인 악기</div></div>
@@ -123,6 +126,32 @@ export default {
 
 </script>
 <style scoped>
+
+.cat_love {
+  position: relative;
+  width: 84px;
+  height: 111px;
+  left: 19.92px;
+  transform: rotate(6.69deg);
+}
+
+.cat_box {
+box-sizing: border-box;
+
+position: absolute;
+width: 122px;
+height: 129px;
+left: 153.92px;
+top: 58.34px;
+
+background: rgba(26, 26, 26, 0.1);
+box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.8);
+backdrop-filter: blur(40px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 20px;
+transform: rotate(6.69deg);
+}
 
 .emptyBox {
   position: absolute;
