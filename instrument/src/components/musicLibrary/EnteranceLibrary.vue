@@ -129,9 +129,7 @@ export default {
 
 .cat_love {
   position: relative;
-  width: 84px;
-  height: 111px;
-  left: 19.92px;
+  left: 5.92px;
   transform: rotate(6.69deg);
 }
 
