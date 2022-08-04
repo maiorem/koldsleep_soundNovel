@@ -169,23 +169,20 @@ const mutations = {
     },
 
     // 비활성화가 아닌 아이콘 전체 재생
-    allPlay() {
-        Object.keys(state.musicIcons).map((key) => {
-            console.log(key);
-            console.log(state.musicIcons[key]);
-            // if (icon[key].usable == 'stop' || icon[key].usable == 'active') {
-            //     icon[key].usable = 'active'
-            //     console.log("all play")
-            //     console.log(state.musicIcons[key])
-            //     audios[key-1].play()
-            // }
+    allPlay(object) {
+        Object.keys(object.musicIcons).map((key) => {
+
+            if (object.musicIcons[key].usable == 'stop' || object.musicIcons[key].usable == 'active') {
+                state.musicIcons[key].usable = 'active'
+                audios[key-1].play()
+            }
         })
 
     },
 
     // 전체 멈춤
     allStop() {
-        console.log("all stop")
+        
         Object.keys(state.musicIcons).map((key) => {
             if (state.musicIcons[key].usable == 'stop' || state.musicIcons[key].usable == 'active') {
                 state.musicIcons[key].usable = 'stop'

@@ -194,10 +194,20 @@ export default {
         this.$emit("emptyEvent");
     },
     allPlay() {
-        store.commit("allPlay");
+        store.commit("allPlay", this.classStates);
+        Object.keys(this.classStates).map((key) => {
+            if (store.getters['getMusicIconUsable'](key) == "active" || store.getters['getMusicIconUsable'](key) == "stop") {
+                this.classStates[key] = "active";
+            }
+        })
     },
     allStop() {
         store.commit("allStop");
+        Object.keys(this.classStates).map((key) => {
+            if (store.getters['getMusicIconUsable'](key) == "active" || store.getters['getMusicIconUsable'](key) == "stop") {
+                this.classStates[key] = "stop";
+            }
+        })
     },
     reset() {
         store.commit("allReset");
