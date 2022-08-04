@@ -136,54 +136,41 @@ for (i=0; i<55; i++) {
 
 
 const mutations = {
-
     
     // 텍스트 클릭 (활성화)
     toggleText(state, iconNum) {
-        
         state.musicIcons[iconNum].usable = "active";
-        console.log("toggle text active : " + state.musicIcons[iconNum].usable);
         audios[iconNum-1].play();
         audios[iconNum-1].loop = true;
-            
     },
 
 
     // 아이콘 클릭
     toggleIcon(state, iconNum) {
-
-        console.log("toggle icon : " + iconNum);
         state.musicIcons[iconNum].usable = "active";
-        console.log("toggle icon active: " + state.musicIcons[iconNum].usable);
         audios[iconNum-1].play();
         audios[iconNum-1].loop = true;
-
     },
 
     toggleIconStop(state, iconNum) {
         state.musicIcons[iconNum].usable = "stop";
-        console.log("toggle icon stop : " + state.musicIcons[iconNum].usable);
         audios[iconNum-1].pause();
         audios[iconNum-1].loop = false;
-
     },
 
     // 비활성화가 아닌 아이콘 전체 재생
     allPlay(object) {
         Object.keys(object.musicIcons).map((key) => {
-
             if (object.musicIcons[key].usable == 'stop' || object.musicIcons[key].usable == 'active') {
                 state.musicIcons[key].usable = 'active'
                 audios[key-1].play()
                 audios[key-1].loop = true
             }
         })
-
     },
 
     // 전체 멈춤
     allStop() {
-        
         Object.keys(state.musicIcons).map((key) => {
             if (state.musicIcons[key].usable == 'stop' || state.musicIcons[key].usable == 'active') {
                 state.musicIcons[key].usable = 'stop'
@@ -191,7 +178,6 @@ const mutations = {
                 audios[key-1].loop = false
             }
         })
-
     },
 
     // 저장된 음악 리셋

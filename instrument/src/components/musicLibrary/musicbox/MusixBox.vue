@@ -173,24 +173,20 @@ export default {
         } else if (store.getters['getMusicIconUsable'](num) == 'stop') {
             // 스톱상태로 버튼 누르면 active
             store.commit("toggleIcon", num);
-            console.log("play restart")
             this.classStates[num] = store.getters['getMusicIconUsable'](num);
 
         } else if (store.getters['getMusicIconUsable'](num) == 'active') {
             //active 상태로 버튼 누르면 stop
             store.commit("toggleIconStop", num);
-            console.log("play stop")
             this.classStates[num] = store.getters['getMusicIconUsable'](num);
         }
         
     },
     receive(num) {
-        console.log("receive : " + num);
         this.classStates[num] = store.getters['getMusicIconUsable'](num);
     },
     //비활성 버튼을 클릭한 경우
     empty() {
-        console.log("empty Button!!!");
         this.$emit("emptyEvent");
     },
     allPlay() {

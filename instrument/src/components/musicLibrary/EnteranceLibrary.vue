@@ -110,12 +110,10 @@ export default {
       this.isShow[index] = false;
     },
     emptyEvent() {
-      console.log("receive empty state!!!");
       this.emptyState = true
     },
     onClickOutside() {
       if (this.emptyState == true) {
-        console.log("close!");
         this.emptyState = !this.emptyState
       }
       
