@@ -125,7 +125,7 @@ button {
   .correct {
     position: relative;
     width: 100vw;
-    height: 676px;
+    height: 330px;
     left: 0;
     top: 3.45%;
     text-align: center;

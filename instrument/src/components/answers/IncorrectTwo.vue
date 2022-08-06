@@ -143,7 +143,7 @@ button {
   .incorrect {
     position: relative;
     width: 100vw;
-    height: 676px;
+    height: 530px;
     left: 0;
     top: 3.45%;
     text-align: center;
@@ -154,14 +154,15 @@ button {
     margin-left: 0;
     margin-right: 0;
     width: 280px;
-    height: 550px;
+    height: 450px;
     left: 12.53%;
   }
 
-  .kicked_off {
+  .kicked_out {
     height: 57px;
     width: 281px;
   }
+
  
 }
 
