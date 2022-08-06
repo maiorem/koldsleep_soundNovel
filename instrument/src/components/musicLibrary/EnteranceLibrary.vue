@@ -5,7 +5,7 @@
     </div>
     <div v-draggable="{ update: active }" id="index_list">
       <div class="content_box_list">
-      <div class="novel_title" @click="showComp(0)"><v-img src="@/assets/img/dictionary.png" class="book_img"></v-img><div class="book_title">가장 개인적인 악기</div></div>
+      <a @click="showComp(0)" href="#"><div class="novel_title"><v-img src="@/assets/img/dictionary.png" class="book_img"></v-img><div class="book_title">가장 개인적인 악기</div></div></a>
       <ul>
         <li @click="showComp(1)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>꿈을 오갈 때는 빈손으로</li>
         <li @click="showComp(2)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>고래의 아이</li>
