@@ -70,6 +70,10 @@ import indexFourteen from '@/components/musicLibrary/index/indexFourteen.vue'
 
 import MusicBox from '@/components/musicLibrary/musicbox/MusixBox.vue'
 
+// import mobileCheck from '@/plugins/mobileCheck.js'
+
+
+
 export default {
   name: 'enteranceLibrary',
   components: {
@@ -119,7 +123,17 @@ export default {
       
     }
   }
+
 }
+
+// window.onload = function(){
+//   // if (mobileCheck) {
+//     var div = document.getElementsByClassName('revue-draggable');
+//     console.log(div);
+//     // div.classList.remove('revue-draggable');
+//   // }
+// }
+
 
 
 </script>
@@ -272,4 +286,20 @@ display: none;
   display: none;
 }
 
+@media (max-width: 600px) {
+
+    #index_list {
+      left: 2.13%;
+      top: 500px;
+      width: 359px;
+      height: 600px;
+        
+    }
+
+    .content_box_list {
+      height: 520px;
+
+    }
+
+}
 </style>

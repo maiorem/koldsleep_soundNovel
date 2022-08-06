@@ -188,5 +188,22 @@ export default {
 
 }
 
+@media (max-width: 600px) {
+
+    #personal_intru {
+      left: 2.13%;
+      top: 500px;
+      width: 359px;
+      height: 600px;
+        
+    }
+
+    .content {
+      height: 520px;
+
+    }
+
+}
+
 
 </style>

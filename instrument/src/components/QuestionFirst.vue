@@ -151,7 +151,7 @@ button {
   .quiz_1 {
     position: relative;
     width: 100vw;
-    height: 676px;
+    height: 720px;
     left: 0;
     top: 3.45%;
     text-align: center;
@@ -169,6 +169,11 @@ button {
   .answer_btn {
     height: 57px;
     width: 281px;
+  }
+
+  .footer {
+    position: relative;
+    margin-top: 40px;
   }
  
 }

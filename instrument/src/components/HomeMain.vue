@@ -49,7 +49,7 @@ export default {
 @media (max-width: 600px) {
   .background {
     width: 100vw;
-    height: 820px;
+    height: 1341px;
     position:absolute;
   }
 }

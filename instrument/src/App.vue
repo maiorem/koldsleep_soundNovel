@@ -13,6 +13,8 @@ export default {
     HomeMain,
   }
 }
+
+
 </script>
 
 <style>
@@ -24,4 +26,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
+
+
 </style>

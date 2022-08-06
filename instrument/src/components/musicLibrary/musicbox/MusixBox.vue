@@ -82,7 +82,9 @@
 </template>
 <script>
 import eventBus from '@/plugins/eventbus.js'
+// import mobileCheck from '@/plugins/mobileCheck.js'
 import store from "@/store/index.js";
+
 
 
 export default {
@@ -212,6 +214,15 @@ export default {
   
 
 }
+
+// window.onload = function(){
+// //   if (mobileCheck) {
+//     var div = document.getElementsByClassName('revue-draggable');
+//     console.log(div);
+//     // div.classList.remove('revue-draggable');
+// //   }
+// }
+
 </script>
 
 <style scoped>
@@ -308,6 +319,14 @@ td.sound {
     height: 15px;
     cursor: pointer;
 }
+@media (max-width: 600px) {
 
+    #instrument_button {
+        left: 5.7%;
+        top: 3.79%;
+        
+    }
+
+}
 
 </style>
