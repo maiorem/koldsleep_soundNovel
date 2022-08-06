@@ -4,7 +4,6 @@
       <v-img class="cat_love" src="@/assets/img/sanho.png"></v-img>
     </div>
     <div v-draggable="{ update: active }" id="index_list">
-      <strong class="handling">here</strong>
       <div class="content_box_list">
       <div class="novel_title" @click="showComp(0)"><v-img src="@/assets/img/dictionary.png" class="book_img"></v-img><div class="book_title">가장 개인적인 악기</div></div>
       <ul>
@@ -25,23 +24,23 @@
       </ul>
       </div>
     </div>
-    <MusicBox v-draggable  v-on:emptyEvent="emptyEvent" v-click-outside="onClickOutside"/>
+    <MusicBox v-draggable="{ update: active }"  v-on:emptyEvent="emptyEvent" v-click-outside="onClickOutside"/>
     
-    <PersonalInstrumentIntro v-draggable v-show="isShow[0]" v-on:btnclose="btnClose(0)"/>
-    <indexOne v-draggable v-show="isShow[1]"  v-on:btnclose="btnClose(1)" />
-    <indexTwo v-draggable v-show="isShow[2]"  v-on:btnclose="btnClose(2)" />
-    <indexThree v-draggable v-show="isShow[3]"  v-on:btnclose="btnClose(3)" />
-    <indexFour v-draggable v-show="isShow[4]"  v-on:btnclose="btnClose(4)" />
-    <indexFive v-draggable v-show="isShow[5]"  v-on:btnclose="btnClose(5)" />
-    <indexSix v-draggable v-show="isShow[6]"  v-on:btnclose="btnClose(6)" />
-    <indexSeven v-draggable v-show="isShow[7]"  v-on:btnclose="btnClose(7)" />
-    <indexEight v-draggable v-show="isShow[8]"  v-on:btnclose="btnClose(8)" />
-    <indexNine v-draggable v-show="isShow[9]"  v-on:btnclose="btnClose(9)"  />
-    <indexTen v-draggable v-show="isShow[10]"  v-on:btnclose="btnClose(10)" />
-    <indexEleven v-draggable v-show="isShow[11]"  v-on:btnclose="btnClose(11)" />
-    <indexTwelve v-draggable v-show="isShow[12]"  v-on:btnclose="btnClose(12)" />
-    <indexThirteen v-draggable v-show="isShow[13]"  v-on:btnclose="btnClose(13)" />
-    <indexFourteen v-draggable v-show="isShow[14]"  v-on:btnclose="btnClose(14)" />
+    <PersonalInstrumentIntro v-draggable="{ update: active }" v-show="isShow[0]" v-on:btnclose="btnClose(0)"/>
+    <indexOne v-draggable="{ update: active }" v-show="isShow[1]"  v-on:btnclose="btnClose(1)" />
+    <indexTwo v-draggable="{ update: active }" v-show="isShow[2]"  v-on:btnclose="btnClose(2)" />
+    <indexThree v-draggable="{ update: active }" v-show="isShow[3]"  v-on:btnclose="btnClose(3)" />
+    <indexFour v-draggable="{ update: active }" v-show="isShow[4]"  v-on:btnclose="btnClose(4)" />
+    <indexFive v-draggable="{ update: active }" v-show="isShow[5]"  v-on:btnclose="btnClose(5)" />
+    <indexSix v-draggable="{ update: active }" v-show="isShow[6]"  v-on:btnclose="btnClose(6)" />
+    <indexSeven v-draggable="{ update: active }" v-show="isShow[7]"  v-on:btnclose="btnClose(7)" />
+    <indexEight v-draggable="{ update: active }" v-show="isShow[8]"  v-on:btnclose="btnClose(8)" />
+    <indexNine v-draggable="{ update: active }" v-show="isShow[9]"  v-on:btnclose="btnClose(9)"  />
+    <indexTen v-draggable="{ update: active }" v-show="isShow[10]"  v-on:btnclose="btnClose(10)" />
+    <indexEleven v-draggable="{ update: active }" v-show="isShow[11]"  v-on:btnclose="btnClose(11)" />
+    <indexTwelve v-draggable="{ update: active }" v-show="isShow[12]"  v-on:btnclose="btnClose(12)" />
+    <indexThirteen v-draggable="{ update: active }" v-show="isShow[13]"  v-on:btnclose="btnClose(13)" />
+    <indexFourteen v-draggable="{ update: active }" v-show="isShow[14]"  v-on:btnclose="btnClose(14)" />
     <div v-show="emptyState" class="emptyBox">
       <div class="textBox">
         채널헤드의 목소리를 발견하고<br>
@@ -103,7 +102,7 @@ export default {
         14:false,
       },
       emptyState : false,
-      active : false
+      active : false,
     }
   },
   methods: {
@@ -124,18 +123,14 @@ export default {
       }
       
     },
-    onTouch() {
 
-      this.dragOption = {
-        handle : 'strong'
-      }
-    },
   },
   created() {
-    if (mobileCheck) {
+    if (!mobileCheck) {
       this.active = true;
     }
   }
+
 }
 
 
@@ -184,9 +179,7 @@ transform: rotate(6.69deg);
   text-align: center;
 }
 
-strong.handling {
-  display: none;
-}
+
 
 .textBox{
   position: relative;
