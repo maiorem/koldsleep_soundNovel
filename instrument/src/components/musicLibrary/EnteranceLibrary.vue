@@ -3,7 +3,8 @@
     <div class="cat_box">
       <v-img class="cat_love" src="@/assets/img/sanho.png"></v-img>
     </div>
-    <div v-draggable id="index_list">
+    <div v-draggable="{ update: active }" id="index_list">
+      <strong class="handling">here</strong>
       <div class="content_box_list">
       <div class="novel_title" @click="showComp(0)"><v-img src="@/assets/img/dictionary.png" class="book_img"></v-img><div class="book_title">가장 개인적인 악기</div></div>
       <ul>
@@ -70,7 +71,7 @@ import indexFourteen from '@/components/musicLibrary/index/indexFourteen.vue'
 
 import MusicBox from '@/components/musicLibrary/musicbox/MusixBox.vue'
 
-// import mobileCheck from '@/plugins/mobileCheck.js'
+import mobileCheck from '@/plugins/mobileCheck.js'
 
 
 
@@ -101,7 +102,8 @@ export default {
         13:false,
         14:false,
       },
-      emptyState : false
+      emptyState : false,
+      active : false
     }
   },
   methods: {
@@ -121,18 +123,23 @@ export default {
         this.emptyState = !this.emptyState
       }
       
+    },
+    onTouch() {
+
+      this.dragOption = {
+        handle : 'strong'
+      }
+    },
+  },
+  created() {
+    if (mobileCheck) {
+      this.active = true;
     }
   }
-
 }
 
-// window.onload = function(){
-//   // if (mobileCheck) {
-//     var div = document.getElementsByClassName('revue-draggable');
-//     console.log(div);
-//     // div.classList.remove('revue-draggable');
-//   // }
-// }
+
+
 
 
 
@@ -175,6 +182,10 @@ transform: rotate(6.69deg);
   mix-blend-mode: normal;
 
   text-align: center;
+}
+
+strong.handling {
+  display: none;
 }
 
 .textBox{
