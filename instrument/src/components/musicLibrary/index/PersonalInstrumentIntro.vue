@@ -117,20 +117,38 @@ display: none;
     margin-top: 58px;
 
 }
-</style>
-<style>
+
+
 @media (max-width: 600px) {
 
     #personal_intru {
-      left: 2.13%;
-      top: 500px;
-      width: 359px;
-      height: 600px;
+        left: 2.13%;
+        top: 500px;
+        width: 359px;
+        height: 600px;
         
     }
 
+    .content-wrap {
+        width: 255px;
+
+    }
+    .title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: #EAEAEA;
+
+
+    }
+
     .content {
-      height: 520px;
+        width: 255px;
+        height: 520px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 200%;
+        color: #EAEAEA;
 
     }
 }
