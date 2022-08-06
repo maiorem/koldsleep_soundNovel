@@ -146,7 +146,7 @@
     </div>
 </template>
 <script>
-import eventBus from '@/assets/eventbus.js'
+import eventBus from '@/plugins/eventbus.js'
 import store from "@/store/index.js";
 
 export default {
