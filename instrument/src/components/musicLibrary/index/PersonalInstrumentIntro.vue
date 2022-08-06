@@ -131,7 +131,7 @@ display: none;
 
     .content-wrap {
         width: 255px;
-
+        height: 520px;
     }
     .title {
         font-weight: 700;
