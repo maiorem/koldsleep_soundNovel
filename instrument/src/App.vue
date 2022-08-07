@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :style="{ 'background-image' : randomImg() }">
     <HomeMain />
   </div>
 </template>
@@ -11,6 +11,25 @@ export default {
   name: 'App',
   components: {
     HomeMain,
+  },
+  methods: {
+    randomImg() {
+      const rdIdx = Math.floor(Math.random() * this.src.length)
+      return `url("${this.src[rdIdx]}")`
+
+    }
+  },
+  data() {
+    return {
+      src : [
+        'https://koldsleep.netlify.app/img/수면4.4fd0a85e.gif',
+        'https://koldsleep.netlify.app/img/수면8.b66174ed.gif',
+        'https://koldsleep.netlify.app/img/수면13.a0def2b0.gif',
+        'https://koldsleep.netlify.app/img/수면9.0aa9e515.webp',
+        'https://koldsleep.netlify.app/img/수면10.e3237dd2.webp',
+        'https://koldsleep.netlify.app/img/수면12.96cdb0ad.webp',
+      ]
+    }
   }
 }
 
@@ -25,7 +44,21 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+
+  height: 100vh;
+  margin:0; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; 
 }
 
+@media (max-width: 600px) {
+  #app {
+    width: 100vw;
+    height: 1341px;
+    position:absolute;
+    text-align: center;
+  }
+}
 
 </style>

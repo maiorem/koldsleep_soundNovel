@@ -82,7 +82,7 @@
 </template>
 <script>
 import eventBus from '@/plugins/eventbus.js'
-// import mobileCheck from '@/plugins/mobileCheck.js'
+import mobileCheck from '@/plugins/mobileCheck.js'
 import store from "@/store/index.js";
 
 
@@ -189,7 +189,12 @@ export default {
     },
     //비활성 버튼을 클릭한 경우
     empty() {
-        this.$emit("emptyEvent");
+        if(mobileCheck) {
+            this.$emit("emptyEventMobile");
+        } else {
+            this.$emit("emptyEvent");
+        }
+        
     },
     allPlay() {
         store.commit("allPlay", this.classStates);

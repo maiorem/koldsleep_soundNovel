@@ -74,7 +74,7 @@
         </ul>
         </div>
       </div>
-      <MusicBox v-on:emptyEvent="emptyEvent" v-click-outside="onClickOutside"/>
+      <MusicBox v-on:emptyEventMobile="mobileEmptyState" v-click-outside="onClickOutsideMobile"/>
       
       <PersonalInstrumentIntro v-show="isShow[0]" v-on:btnclose="btnClose(0)"/>
       <indexOne v-show="isShow[1]"  v-on:btnclose="btnClose(1)" />
@@ -91,7 +91,7 @@
       <indexTwelve v-show="isShow[12]"  v-on:btnclose="btnClose(12)" />
       <indexThirteen v-show="isShow[13]"  v-on:btnclose="btnClose(13)" />
       <indexFourteen v-show="isShow[14]"  v-on:btnclose="btnClose(14)" />
-      <div v-show="emptyState" class="emptyBox">
+      <div v-show="mobileEmptyState" class="emptyBox">
         <div class="textBox">
           채널헤드의 목소리를 발견하고<br>
           그들이 서로를 알아채게 만들어주세요.
@@ -153,6 +153,7 @@ export default {
         14:false,
       },
       emptyState : false,
+      mobileEmptyState : false,
       active : false,
     }
   },
@@ -174,6 +175,15 @@ export default {
       }
       
     },
+    emptyEventMobile() {
+      this.mobileEmptyState = true
+    },
+    onClickOutsideMobile() {
+      if (this.mobileEmptyState == true) {
+        this.mobileEmptyState = !this.mobileEmptyState
+      }
+
+    }
 
   },
   created() {
@@ -366,6 +376,11 @@ display: none;
     .content_box_list {
       height: 520px;
 
+    }
+
+    .emptyBox{
+      left: 0;
+      width: 100vw;
     }
 
 }
