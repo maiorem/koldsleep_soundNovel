@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :style="{ 'background-image' : randomImg() }">
+  <div id="app">
     <HomeMain />
   </div>
 </template>
@@ -44,6 +44,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+
+  background-image: 
+  url('@/assets/img/bg/수면4.gif'),
+  url('@/assets/img/bg/수면8.gif'),
+  url('@/assets/img/bg/수면9.webp'),
+  url('@/assets/img/bg/수면10.webp'),
+  url('@/assets/img/bg/수면12.webp'),
+  url('@/assets/img/bg/수면13.gif');
 
   height: 100vh;
   margin:0; 
