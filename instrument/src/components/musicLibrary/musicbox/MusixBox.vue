@@ -200,7 +200,7 @@ export default {
         })
     },
     allStop() {
-        store.commit("allStop");
+        store.commit("allStop", this.classStates);
         Object.keys(this.classStates).map((key) => {
             if (store.getters['getMusicIconUsable'](key) == "active" || store.getters['getMusicIconUsable'](key) == "stop") {
                 this.classStates[key] = "stop";

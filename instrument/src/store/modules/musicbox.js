@@ -170,9 +170,9 @@ const mutations = {
     },
 
     // 전체 멈춤
-    allStop() {
-        Object.keys(state.musicIcons).map((key) => {
-            if (state.musicIcons[key].usable == 'stop' || state.musicIcons[key].usable == 'active') {
+    allStop(object) {
+        Object.keys(object.musicIcons).map((key) => {
+            if (object.musicIcons[key].usable == 'stop' || object.musicIcons[key].usable == 'active') {
                 state.musicIcons[key].usable = 'stop'
                 audios[key-1].pause()
                 audios[key-1].loop = false
