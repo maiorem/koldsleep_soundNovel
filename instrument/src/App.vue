@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :style="{ 'background-image' : randomImg() }">
     <HomeMain />
   </div>
 </template>
