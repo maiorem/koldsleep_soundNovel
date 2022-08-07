@@ -1,8 +1,6 @@
 <template>
   <div class="background">
-    <div class="background-image" :style="src">
     <div :is="currentComponent" :quiz-answer="quizAnswer"></div>
-    </div>
   </div>
 </template>
 
@@ -20,7 +18,6 @@ export default {
   name: 'HomeMain',
   data: () => ({
     currentComponent : 'questionFirst',
-    src : {}
   }),
   components: {
     'questionFirst' : QuestionFirst,
@@ -34,23 +31,22 @@ export default {
   methods: {
     quizAnswer: function(component) {
       this.currentComponent = component;
+    },
+    randomImg() {
+      const bgImg = [
+        'https://koldsleep.netlify.app/img/수면4.gif',
+        'https://koldsleep.netlify.app/img/수면4.gif',
+        'https://koldsleep.netlify.app/img/수면4.gif',
+        'https://koldsleep.netlify.app/img/수면4.gif',
+        'https://koldsleep.netlify.app/img/수면4.gif',
+        'https://koldsleep.netlify.app/img/수면4.gif',
+      ]
+
+      const rdIdx = Math.floor(Math.random() * bgImg.length)
+      return `url("${bgImg[rdIdx]}")`
+
     }
   },
-  created() {
-    const bgImg = [
-      '@/assets/bg/수면4.gif',
-      '@/assets/bg/수면8.gif',
-      '@/assets/bg/수면13.gif',
-      '@/assets/bg/수면9.webp',
-      '@/assets/bg/수면10.webp',
-      '@/assets/bg/수면12.webp',
-    ]
-
-    const rdIdx = Math.floor(Math.random() * bgImg.length)
-    this.src = {
-      'background-image' : 'url('+bgImg[rdIdx]+')'
-    }
-  }
 }
 </script>
 
@@ -59,15 +55,16 @@ export default {
 .background {
     height: 100vh;
     margin:0; 
-    background-image: url('@/assets/bg/수면8.gif');
+    background-image: 
+    url('@/assets/bg/수면4.gif'), 
+    url('@/assets/bg/수면8.gif'), 
+    url('@/assets/bg/수면13.gif'), 
+    url('@/assets/bg/수면9.webp'), 
+    url('@/assets/bg/수면10.webp'),
+    url('@/assets/bg/수면12.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
-}
-
-.background-image {
-  height: 100%;
-  widows: 100%;
 }
 
 @media (max-width: 600px) {
