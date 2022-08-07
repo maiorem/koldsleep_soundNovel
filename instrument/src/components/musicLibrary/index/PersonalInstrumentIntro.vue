@@ -122,17 +122,19 @@ display: none;
 @media (max-width: 600px) {
 
     #personal_intru {
-        left: 2.13%;
         top: 500px;
-        width: 359px;
+        left: 0;
+        width: 100vw;
         height: 600px;
         
     }
 
     .content-wrap {
-        width: 255px;
+        left: 45px;
+        width: 310px;
         height: 520px;
     }
+    
     .title {
         font-weight: 700;
         font-size: 18px;
@@ -143,7 +145,7 @@ display: none;
     }
 
     .content {
-        width: 255px;
+        width: 310px;
         height: 520px;
         font-weight: 600;
         font-size: 14px;

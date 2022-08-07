@@ -51,6 +51,7 @@ export default {
     width: 100vw;
     height: 1341px;
     position:absolute;
+    text-align: center;
   }
 }
 

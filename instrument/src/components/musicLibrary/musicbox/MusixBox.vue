@@ -208,7 +208,12 @@ export default {
         })
     },
     reset() {
-        store.commit("allReset");
+        store.commit("allReset", this.classStates);
+        Object.keys(this.classStates).map((key) => {
+            if (store.getters['getMusicIconUsable'](key) == "active" || store.getters['getMusicIconUsable'](key) == "stop") {
+                this.classStates[key] = "disabled";
+            }
+        })
     },
 }
   
@@ -322,7 +327,7 @@ td.sound {
 @media (max-width: 600px) {
 
     #instrument_button {
-        left: 5.7%;
+        left: 6.5%;
         top: 3.79%;
         
     }

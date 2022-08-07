@@ -181,8 +181,8 @@ const mutations = {
     },
 
     // 저장된 음악 리셋
-    allReset() {
-        Object.keys(state.musicIcons).map((key) => {
+    allReset(object) {
+        Object.keys(object.musicIcons).map((key) => {
             state.musicIcons[key].usable = 'disabled'
         })
         localStorage.clear();

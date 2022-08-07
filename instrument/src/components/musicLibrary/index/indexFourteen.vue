@@ -157,17 +157,19 @@ display: none;
 @media (max-width: 600px) {
 
     #personal_intru {
-        left: 2.13%;
         top: 500px;
-        width: 359px;
+        left: 0;
+        width: 100vw;
         height: 600px;
         
     }
 
     .content-wrap {
-        width: 255px;
-        height: 520px;
+        left: 45px;
+        width: 310px;
+        height: 510px;
     }
+    
     .title {
         font-weight: 700;
         font-size: 18px;
@@ -178,8 +180,8 @@ display: none;
     }
 
     .content {
-        width: 255px;
-        height: 520px;
+        width: 310px;
+        height: 510px;
         font-weight: 600;
         font-size: 14px;
         line-height: 200%;
@@ -187,4 +189,5 @@ display: none;
 
     }
 }
+
 </style>

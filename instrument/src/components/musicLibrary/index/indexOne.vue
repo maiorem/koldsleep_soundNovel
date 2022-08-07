@@ -59,6 +59,7 @@
 꿈과 소리를 연구하는 우리의 연구실은 하얀색이다. 하얀색은 모든 변수에서도 우아하다. 뭘 두어도 잘 어울린다. 홀로 있을 때의 입지가 머쓱해지면, 사실 처음부터 나는 나에게 얹어지는 모든 대상을 비추기 위해 존재했다는 변명이 가능하다. 어느 화풍의 작가라도 다 기다려주는 전시 대여공간처럼. 혹은 그 위를 거쳐 간 모든 <span class="sound-text" @click="play">연극</span>에도 불구하고 언제나 빈자리로만 존재하는 무대처럼. 인간들의 꿈이 장면과 소리로 스쳤다가 사라져버리는 백색의 연구실을 상상한다. 이곳은 모두를 위한 장소가 될 수 있다. 동시에 누구도 위하지 않는다. 
 <br>
 <br>
+
             </div>
         </div>
     </div>
@@ -191,18 +192,19 @@ export default {
 @media (max-width: 600px) {
 
     #personal_intru {
-        left: 2.13%;
         top: 500px;
-        width: 359px;
+        left: 0;
+        width: 100vw;
         height: 600px;
         
     }
 
     .content-wrap {
-        width: 255px;
-        height: 520px;
-
+        left: 45px;
+        width: 310px;
+        height: 510px;
     }
+    
     .title {
         font-weight: 700;
         font-size: 18px;
@@ -213,8 +215,8 @@ export default {
     }
 
     .content {
-        width: 255px;
-        height: 520px;
+        width: 310px;
+        height: 510px;
         font-weight: 600;
         font-size: 14px;
         line-height: 200%;

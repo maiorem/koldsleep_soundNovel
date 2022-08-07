@@ -356,9 +356,9 @@ display: none;
     }
 
     #index_list {
-      left: 2.13%;
       top: 500px;
-      width: 359px;
+      left: 0;
+      width: 100vw;
       height: 600px;
         
     }
