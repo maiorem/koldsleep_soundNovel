@@ -34,12 +34,12 @@ export default {
     },
     randomImg() {
       const bgImg = [
-        'https://koldsleep.netlify.app/img/수면4.gif',
-        'https://koldsleep.netlify.app/img/수면4.gif',
-        'https://koldsleep.netlify.app/img/수면4.gif',
-        'https://koldsleep.netlify.app/img/수면4.gif',
-        'https://koldsleep.netlify.app/img/수면4.gif',
-        'https://koldsleep.netlify.app/img/수면4.gif',
+        '@/assets/bg/수면4.gif',
+        '@/assets/bg/수면8.gif',
+        '@/assets/bg/수면13.gif',
+        '@/assets/bg/수면9.webp',
+        '@/assets/bg/수면10.webp',
+        '@/assets/bg/수면12.webp',
       ]
 
       const rdIdx = Math.floor(Math.random() * bgImg.length)
@@ -66,6 +66,7 @@ export default {
     background-repeat: no-repeat;
     background-position: center; 
 }
+
 
 @media (max-width: 600px) {
   .background {
