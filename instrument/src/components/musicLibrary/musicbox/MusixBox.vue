@@ -71,8 +71,8 @@
                     <td @click="play(52)" :class="{'sound' : classStates[52] === 'disabled', sound_active : classStates[52] === 'active', sound_pause : classStates[52] === 'stop' }"></td>
                     <td @click="play(53)" :class="{'sound' : classStates[53] === 'disabled', sound_active : classStates[53] === 'active', sound_pause : classStates[53] === 'stop' }"></td>
                     <td @click="play(54)" :class="{'sound' : classStates[54] === 'disabled', sound_active : classStates[54] === 'active', sound_pause : classStates[54] === 'stop' }"></td>
-                    <td @click="allPlay" class="play"><v-img class="playbtn" src="@/assets/img/playButton.png"></v-img></td>
-                    <td @click="allStop" class="stop"><v-img class="stopbtn" src="@/assets/img/stopButton.png"></v-img></td>
+                    <td @click="allPlay" class="play"><v-img class="playbtn" src="@/assets/img/playButton.svg"></v-img></td>
+                    <td @click="allStop" class="stop"><v-img class="stopbtn" src="@/assets/img/stopButton.svg"></v-img></td>
                 </tr>
             </table>
 
@@ -304,11 +304,6 @@ td.sound {
 
 .playbtn {
     position: relative;
-    width: 15px;
-    height: 15px;
-
-    top: 10px;
-    left: 10px;
 
     border-radius: 1px;
 }
@@ -317,11 +312,6 @@ td.sound {
 
     position: relative;
 
-    top: 10px;
-    left: 10px;
-
-    width: 15px;
-    height: 15px;
     cursor: pointer;
 }
 @media (max-width: 600px) {
