@@ -54,20 +54,20 @@
         <div class="content_box_list">
         <a @click="showComp(0)" href="#"><div class="novel_title"><v-img src="@/assets/img/dictionary.png" class="book_img"></v-img><div class="book_title">가장 개인적인 악기</div></div></a>
         <ul>
-          <li @click="showComp(1)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>꿈을 오갈 때는 빈손으로</li>
-          <li @click="showComp(2)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>고래의 아이</li>
-          <li @click="showComp(3)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>누가 잠들고 누가 잠들지 않았는가</li>
-          <li @click="showComp(4)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>한 마리의 새가 날아와 손바닥에 앉는다면</li>
-          <li @click="showComp(5)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>목소리의 행방</li>
-          <li @click="showComp(6)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>연구자 중 하나</li>
-          <li @click="showComp(7)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>서울시 강북구 인수봉로 301 1층</li>
-          <li @click="showComp(8)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>하늘의 고리와 눈을 마주치다</li>
-          <li @click="showComp(9)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>버튼 하나를 눌러 타인의 꿈을 삭제하시겠습니까?</li>
-          <li @click="showComp(10)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>스트로베리 캔디</li>
-          <li @click="showComp(11)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>침입자에게는 문 너머가 없다</li>
-          <li @click="showComp(12)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>세상에서 가장 개인적인 악기</li>
-          <li @click="showComp(13)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>이 꿈은 갑자기 제 머릿속으로 쏙 들어왔음을 명시합니다.</li>
-          <li @click="showComp(14)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>가짜여도 괜찮은</li>
+          <li @click="showComp(1)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>1.꿈을 오갈 때는 빈손으로</li>
+          <li @click="showComp(2)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>2.고래의 아이</li>
+          <li @click="showComp(3)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>3.누가 잠들고 누가 잠들지 않았는가</li>
+          <li @click="showComp(4)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>4.한 마리의 새가 날아와 손바닥에 앉는다면</li>
+          <li @click="showComp(5)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>5.목소리의 행방</li>
+          <li @click="showComp(6)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>6.연구자 중 하나</li>
+          <li @click="showComp(7)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>7.서울시 강북구 인수봉로 301 1층</li>
+          <li @click="showComp(8)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>8.하늘의 고리와 눈을 마주치다</li>
+          <li @click="showComp(9)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>9.버튼 하나를 눌러 타인의 꿈을 삭제하시겠습니까?</li>
+          <li @click="showComp(10)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>10.스트로베리 캔디</li>
+          <li @click="showComp(11)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>11.침입자에게는 문 너머가 없다</li>
+          <li @click="showComp(12)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>12.세상에서 가장 개인적인 악기</li>
+          <li @click="showComp(13)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>13.이 꿈은 갑자기 제 머릿속으로 쏙 들어왔음을 명시합니다.</li>
+          <li @click="showComp(14)"><v-img src="@/assets/img/memo.png" class="book_img"></v-img>14.가짜여도 괜찮은</li>
         </ul>
         </div>
       </div>

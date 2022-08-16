@@ -106,7 +106,7 @@ export default {
 
     color: #8F8F8F;
 }
-.sound-text:visited {
+.sound-text_visited {
     filter: blur(0px);
     -webkit-filter: blur(0px);
 

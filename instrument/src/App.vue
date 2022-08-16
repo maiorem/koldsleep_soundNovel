@@ -59,6 +59,14 @@ export default {
   background-repeat: no-repeat;
   background-position: center; 
 }
+@media (max-height: 900px) {
+
+  #app {
+    height: 1000px;
+  }
+
+}
+
 
 @media (max-width: 600px) {
   #app {
