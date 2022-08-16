@@ -30,7 +30,7 @@
 김이리에가 웃었다. 
 <br>
 <br>
-“보이지 않아도 <span class="sound-text" @click="play('좋겠지')">찾아낼 수 있다면 좋겠지만</span>, 모든 일은 서로가 존재한다는 걸 알아채고 시작되잖아.”
+“보이지 않아도 <span :class="{'sound-text' : visited[54] === 'disabled', 'sound_text_visited' : visited[54] === 'active', 'sound_text_visited' : visited[54] === 'stop'}" @click="play('좋겠지')">찾아낼 수 있다면 좋겠지만</span>, 모든 일은 서로가 존재한다는 걸 알아채고 시작되잖아.”
 <br>
 <br>
 컴컴한 골목을 함께 걸으며, 나는 김이리에 등 뒤로 투명한 목소리들이 꼬리처럼 따라붙는 모습을 상상했다. 가려낼 수 있는 안목이 없어 온갖 백귀들의 영혼을 불러들이고야 마는 서투른 영매처럼.
@@ -61,6 +61,14 @@ import store from "@/store/index.js";
 
 export default {
   name: 'index_fourteen',
+  data() {
+    return {
+        visited : {
+            54: store.getters['getMusicIconUsable'](54),
+        },
+        
+    }
+  },
   methods: {
     close() {
         this.$emit("btnclose");
@@ -71,6 +79,7 @@ export default {
             case '좋겠지' :      
                 store.commit("toggleText", 54)
                 eventBus.$emit("iconUsable", 54); 
+                this.visited[54] = store.getters['getMusicIconUsable'](54)
                 break; 
             
         }
@@ -101,8 +110,8 @@ display: none;
 
   border-radius: 20px;
 
-  left: 1500px;
-  top: 900px;
+  left: 150px;
+  top: 200px;
 
   text-align: center;
 }

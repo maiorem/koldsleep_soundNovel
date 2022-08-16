@@ -82,31 +82,31 @@
 두 번째의 실행 결과는 내가 목격할 길이 없지만, 음향원장과 교육부 담당자의 상의 끝에 이 두 가지가 이루어졌다. 그네도 미끄럼틀도 설치 초기에는 방과 후에 줄을 서서 탔다고 한다. 물론 학교 밖에도 놀이터나 공원은 무수하지만, 기숙사생들에게는 멀었다. 무엇보다 청소년들에게는 학교 안에서 해야만 의미 있는 헛짓거리가 있다.
 <br>
 <br>
-남의 꿈에 입장하는 건 피곤한 일이야. 4월 기온으로 유순해진 나에게 이리에는 그런 얘기를 털어놓았다. 흘러들어오기만 하면 남의 악몽에도 거절할 수 없이 끌려 들어간다는 사연이었다. 장소와 연계되어 반복되는 꿈은 누군가에게 트라우마를 남긴 공간인 경우가 많다. 걔가 가장 무서웠다는 공간으로는 <span class="sound-text" @click="play('저수지')">저수지</span>와 <span class="sound-text" @click="play('엘리베이터')">엘리베이터</span>가 있다.
+남의 꿈에 입장하는 건 피곤한 일이야. 4월 기온으로 유순해진 나에게 이리에는 그런 얘기를 털어놓았다. 흘러들어오기만 하면 남의 악몽에도 거절할 수 없이 끌려 들어간다는 사연이었다. 장소와 연계되어 반복되는 꿈은 누군가에게 트라우마를 남긴 공간인 경우가 많다. 걔가 가장 무서웠다는 공간으로는 <span :class="{'sound-text' : visited[32] === 'disabled', 'sound_text_visited' : visited[32] === 'active', 'sound_text_visited' : visited[32] === 'stop'}" @click="play('저수지')">저수지</span>와 <span :class="{'sound-text' : visited[33] === 'disabled', 'sound_text_visited' : visited[33] === 'active', 'sound_text_visited' : visited[33] === 'stop'}" @click="play('엘리베이터')">엘리베이터</span>가 있다.
 <br>
 <br>
 남의 꿈에 진입하게 되면, 김이리에는 그 장소에서 겪은 일이 전무하기 때문에 잠시 공간 속에 방치된다. 그에게는 다시 재생할만한 비디오테이프가 없었다. 꿈의 주인이 꿈 속 서사를 전개해야만 함께 겪는다.
 <br>
 <br>
-꿈의 속성이 개인적인 서사와 가까울수록, <span class="sound-text" @click="play('침대')">닫힌 문으로 만들어진 침대</span>처럼 보편 지식으로는 영 낯선 배경 속에 존재하기도 한다. 그 얘기를 들었을 때는 머리로 상상이 안 되어서 이리에가 친히 칠판에 그려줬다. 아기침대처럼 사방이 막혀있는데, 모든 면이 ‘닫힌 문’으로 만들어진 침대. 그리고 그 공간은 이리에가 모종의 법칙을 발견한 첫 번째 장소이기도 하다.
+꿈의 속성이 개인적인 서사와 가까울수록, <span :class="{'sound-text' : visited[34] === 'disabled', 'sound_text_visited' : visited[34] === 'active', 'sound_text_visited' : visited[34] === 'stop'}" @click="play('침대')">닫힌 문으로 만들어진 침대</span>처럼 보편 지식으로는 영 낯선 배경 속에 존재하기도 한다. 그 얘기를 들었을 때는 머리로 상상이 안 되어서 이리에가 친히 칠판에 그려줬다. 아기침대처럼 사방이 막혀있는데, 모든 면이 ‘닫힌 문’으로 만들어진 침대. 그리고 그 공간은 이리에가 모종의 법칙을 발견한 첫 번째 장소이기도 하다.
 <br>
 <br>
 “그런데 어떻게 남의 꿈인 걸 확신해?”
 <br>
 <br>
-“남의 꿈에서는 뭘 마음대로 열면 바닥이 만들어지지 않고 <span class="sound-text" @click="play('추락')">추락해</span>. 그 너머는 나에게 정보가 없는 영역이라서.”
+“남의 꿈에서는 뭘 마음대로 열면 바닥이 만들어지지 않고 <span :class="{'sound-text' : visited[35] === 'disabled', 'sound_text_visited' : visited[35] === 'active', 'sound_text_visited' : visited[35] === 'stop'}" @click="play('추락')">추락해</span>. 그 너머는 나에게 정보가 없는 영역이라서.”
 <br>
 <br>
-이 법칙을 몰랐을 때는 꿈속에서 <span class="sound-text" @click="play('다음')">죽은 채로도 그 다음이 보였다</span>. 이리에는 그 순간 꿈속에 갇힐까봐 진심으로 섬뜩해졌다. 걔는 관에 갇힌 채로 그 뚜껑을 밀었다. 그러자 꿈의 법칙은 물리 법칙보다 우선해서 그에게 응답해줬다. 꿈이 끝났다.
+이 법칙을 몰랐을 때는 꿈속에서 <span :class="{'sound-text' : visited[36] === 'disabled', 'sound_text_visited' : visited[36] === 'active', 'sound_text_visited' : visited[36] === 'stop'}" @click="play('다음')">죽은 채로도 그 다음이 보였다</span>. 이리에는 그 순간 꿈속에 갇힐까봐 진심으로 섬뜩해졌다. 걔는 관에 갇힌 채로 그 뚜껑을 밀었다. 그러자 꿈의 법칙은 물리 법칙보다 우선해서 그에게 응답해줬다. 꿈이 끝났다.
 <br>
 <br>
-이리에는 이제 꿈에서 깨고 싶거든 <span class="sound-text" @click="play('닫힌')">닫힌 문</span>을 연다. 엘리베이터의 문을 열고, 가정집의 화장실이나 침실로 보이는 문을 열고, 가끔은 냉장고도 연다. 그럼 그 안에는 아무것도 없다. 공간이 비어있다는 것이 아니라, 물리적인 의미로 텅 비어있다. 구멍이 나듯이. 그리고 꿈은 순식간에 그 안으로 허물어지기 시작한다.
+이리에는 이제 꿈에서 깨고 싶거든 <span :class="{'sound-text' : visited[37] === 'disabled', 'sound_text_visited' : visited[37] === 'active', 'sound_text_visited' : visited[37] === 'stop'}" @click="play('닫힌')">닫힌 문</span>을 연다. 엘리베이터의 문을 열고, 가정집의 화장실이나 침실로 보이는 문을 열고, 가끔은 냉장고도 연다. 그럼 그 안에는 아무것도 없다. 공간이 비어있다는 것이 아니라, 물리적인 의미로 텅 비어있다. 구멍이 나듯이. 그리고 꿈은 순식간에 그 안으로 허물어지기 시작한다.
 <br>
 <br>
 어떤 꿈은 추락할 때 곤두박질치듯이 공포스럽고, 또 어떤 꿈은 그렇지 않다. 김이리에는 후자의 꿈이 가장 인상 깊었다고 말한다. 
 <br>
 <br>
-문을 열자 아래로 떨어지고 가라앉는다. “괜찮아, 이건 꿈이야.” 오히려 현실보다 다정하다. 달콤하고 부드럽다. 아름답고 매혹적이다. 외롭지 않으며 안겨있다. <span class="sound-text" @click="play('포근')">포근히</span>. 이 사람은 꿈속의 침입자마저도 환대를 해주는군. 김이리에는 느리게 밑으로 잠기면서 눈을 감는다.
+문을 열자 아래로 떨어지고 가라앉는다. “괜찮아, 이건 꿈이야.” 오히려 현실보다 다정하다. 달콤하고 부드럽다. 아름답고 매혹적이다. 외롭지 않으며 안겨있다. <span :class="{'sound-text' : visited[38] === 'disabled', 'sound_text_visited' : visited[38] === 'active', 'sound_text_visited' : visited[38] === 'stop'}" @click="play('포근')">포근히</span>. 이 사람은 꿈속의 침입자마저도 환대를 해주는군. 김이리에는 느리게 밑으로 잠기면서 눈을 감는다.
 <br>
 <br>
 “꿈이 전염되기 전에는 무슨 꿈을 꿨어?”
@@ -127,7 +127,7 @@
 <br>
 <br>
 
-사람이 아무도 없는 운동장은 <span class="sound-text" @click="play('사막')">사막</span>의 광활함을 닮았다. 비어있을 수밖에 없는 공간이 쓸쓸하면서도 마음에 들었다. 무언가를 아름답다고 느끼는 것은 슬픔으로 남는다. 아름답다는 말을 주려면 비일상이 있어야하고, 마비된 것 같은 생활의 권태로움이 일순간 아득할 정도의 압도와 비애가 따르기 마련이다. 그런 건 너무 순간의 간극이 넓다. 문득 창문을 향해 고개를 들었을 때, 잠기는 노을과 마주보는 것처럼 눈부시고 먹먹한 것. 
+사람이 아무도 없는 운동장은 <span :class="{'sound-text' : visited[39] === 'disabled', 'sound_text_visited' : visited[39] === 'active', 'sound_text_visited' : visited[39] === 'stop'}" @click="play('사막')">사막</span>의 광활함을 닮았다. 비어있을 수밖에 없는 공간이 쓸쓸하면서도 마음에 들었다. 무언가를 아름답다고 느끼는 것은 슬픔으로 남는다. 아름답다는 말을 주려면 비일상이 있어야하고, 마비된 것 같은 생활의 권태로움이 일순간 아득할 정도의 압도와 비애가 따르기 마련이다. 그런 건 너무 순간의 간극이 넓다. 문득 창문을 향해 고개를 들었을 때, 잠기는 노을과 마주보는 것처럼 눈부시고 먹먹한 것. 
 <br>
 <br>
 “하늘이 슬플 만큼 아름답네. 저런 것 앞에서는 일상이 하찮아.”
@@ -151,7 +151,7 @@
 “너 그러다가 이빨 깨진다.”
 <br>
 <br>
-그네를 타다가 무릎 다친 초등학생 때 친구를 떠올리며 말해줬다. <span class="sound-text" @click="play('딱지')">딱지</span>가 오래 갔다. 걔는 수업시간에 맨날 그걸 만지작거리며 가장자리를 긁고 있었다.
+그네를 타다가 무릎 다친 초등학생 때 친구를 떠올리며 말해줬다. <span :class="{'sound-text' : visited[40] === 'disabled', 'sound_text_visited' : visited[40] === 'active', 'sound_text_visited' : visited[40] === 'stop'}" @click="play('딱지')">딱지</span>가 오래 갔다. 걔는 수업시간에 맨날 그걸 만지작거리며 가장자리를 긁고 있었다.
 <br>
 <br>
 “감정의 기준을 슬픔에 두지 마.”
@@ -173,6 +173,22 @@ import store from "@/store/index.js";
 
 export default {
   name: 'index_eleven',
+  data() {
+    return {
+        visited : {
+            32: store.getters['getMusicIconUsable'](32),
+            33: store.getters['getMusicIconUsable'](33), 
+            34: store.getters['getMusicIconUsable'](34),
+            35: store.getters['getMusicIconUsable'](35),
+            36: store.getters['getMusicIconUsable'](36),
+            37: store.getters['getMusicIconUsable'](37),
+            38: store.getters['getMusicIconUsable'](38),
+            39: store.getters['getMusicIconUsable'](39),
+            40: store.getters['getMusicIconUsable'](40),
+        },
+        
+    }
+  },
   methods: {
     close() {
         this.$emit("btnclose");
@@ -183,38 +199,47 @@ export default {
             case '저수지' :      
                 store.commit("toggleText", 32)
                 eventBus.$emit("iconUsable", 32); 
+                this.visited[32] = store.getters['getMusicIconUsable'](32);
                 break; 
             case "엘리베이터" :
                 store.commit("toggleText", 33)
                 eventBus.$emit("iconUsable", 33); 
+                this.visited[33] = store.getters['getMusicIconUsable'](33);
                 break;
             case "침대" :
                 store.commit("toggleText", 34)
                 eventBus.$emit("iconUsable", 34); 
+                this.visited[34] = store.getters['getMusicIconUsable'](34);
                 break;
             case "추락" :
                 store.commit("toggleText", 35)
                 eventBus.$emit("iconUsable", 35); 
+                this.visited[35] = store.getters['getMusicIconUsable'](35);
                 break;
             case "다음" :
                 store.commit("toggleText", 36)
                 eventBus.$emit("iconUsable", 36); 
+                this.visited[36] = store.getters['getMusicIconUsable'](36);
                 break;
             case "닫힌" :
                 store.commit("toggleText", 37)
                 eventBus.$emit("iconUsable", 37); 
+                this.visited[37] = store.getters['getMusicIconUsable'](37);
                 break;
             case "포근" :
                 store.commit("toggleText", 38)
                 eventBus.$emit("iconUsable", 38); 
+                this.visited[38] = store.getters['getMusicIconUsable'](38);
                 break;
             case "사막" :
                 store.commit("toggleText", 39)
                 eventBus.$emit("iconUsable", 39); 
+                this.visited[39] = store.getters['getMusicIconUsable'](39);
                 break;
             case "딱지" :
                 store.commit("toggleText", 40)
                 eventBus.$emit("iconUsable", 40); 
+                this.visited[40] = store.getters['getMusicIconUsable'](40);
                 break;
         }
     }
