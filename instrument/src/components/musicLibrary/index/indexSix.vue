@@ -1,7 +1,7 @@
 <template>
     <div id="personal_intru">
         <div class="close-btn">
-            <button @click="close"><v-img src="@/assets/img/closeButton2.png"></v-img></button>
+            <button @click="close"><v-img src="@/assets/img/closeButton2.svg"></v-img></button>
         </div>
         <div class="content-wrap">
             <div class="title"><p>연구자 셋 중 하나</p></div>
@@ -140,8 +140,8 @@ display: none;
     position: relative;
     height: 16px;
     width: 16px;
-    left: 0px;
-    top: 0px;
+    left: 16px;
+    top: 16px;
     border-radius: 16px;
 }
 
