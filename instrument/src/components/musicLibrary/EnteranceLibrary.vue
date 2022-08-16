@@ -1,9 +1,6 @@
 <template>
   <div class="wrap">
     <div class="web_container">
-      <div class="cat_box">
-        <v-img class="cat_love" src="@/assets/img/sanho.png"></v-img>
-      </div>
       <div v-draggable="{ update: active }" id="index_list">
         <div class="content_box_list">
         <div  @click="showComp(0)" class="novel_title"><v-img src="@/assets/img/dictionary.png" class="book_img"></v-img><div class="book_title">가장 개인적인 악기</div></div>
@@ -314,6 +311,7 @@ transform: rotate(6.69deg);
   height: 23px;
   display: inline-block;
   float: left;
+  margin-right: 4px;
 }
 
 
