@@ -12,7 +12,7 @@
 입학식부터 무료한 얼굴로 곤죽이 되어 앉아 있는 아이는 드물다. 무언가를 시작하는 날씨와 상징적인 긴장감이 맞물리면, 그날 하루만큼은 집에서 출발한 기분 그대로 꽁꽁 언 채 사람들과 만난다. 이때의 기억으로 나는 추운 것을 더운 것보다 청결하게 여긴다. 추위는 세포가 죽은 생물이 부패하는 것을 멎게 한다. 졸업과 입학은 언제나 추운 시기에 이루어진다. 한 시절을 겪으며 문드러진 몸을 추위 속에 얼려서 다음 단계로 전달하듯이. 
 <br>
 <br>
-우리가 입학하던 해의 입시 정답은 <span class="sound-text" @click="play('희망')">‘도망가는 희망을 손바닥에 가두다’</span>였다. 어떤 사람들에게는 <span class="sound-text" @click="play('메아리')">‘과녁 한가운데를 뚫는 메아리’</span>, 그리고 단 한명에게는 ‘하늘의 고래와 눈을 마주치다’였다. 
+우리가 입학하던 해의 입시 정답은 <span :class="{'sound-text' : visited[2] === 'disabled', 'sound_text_visited' : visited[2] === 'active', 'sound_text_visited' : visited[2] === 'stop'}" @click="play('희망')">‘도망가는 희망을 손바닥에 가두다’</span>였다. 어떤 사람들에게는 <span :class="{'sound-text' : visited[3] === 'disabled', 'sound_text_visited' : visited[3] === 'active', 'sound_text_visited' : visited[3] === 'stop'}"  @click="play('메아리')">‘과녁 한가운데를 뚫는 메아리’</span>, 그리고 단 한명에게는 ‘하늘의 고래와 눈을 마주치다’였다. 
 <br>
 <br>
 “쟤가 고래야.”
@@ -108,6 +108,15 @@ import store from "@/store/index.js";
 
 export default {
   name: 'index_two',
+  data() {
+        return {
+            visited : {
+                2: store.getters['getMusicIconUsable'](2),
+                3: store.getters['getMusicIconUsable'](3), 
+            },
+            
+        }
+ },
   methods: {
     close() {
         this.$emit("btnclose");
@@ -116,12 +125,14 @@ export default {
 
         switch(message) {
             case '희망' :      
-                store.commit("toggleText", 2)
+                store.commit("toggleText", 2);
                 eventBus.$emit("iconUsable", 2); 
+                this.visited[2] = store.getters['getMusicIconUsable'](2);
                 break; 
             case "메아리" :
                 store.commit("toggleText", 3)
                 eventBus.$emit("iconUsable", 3); 
+                this.visited[3] = store.getters['getMusicIconUsable'](3);
                 break;
         }
     }
