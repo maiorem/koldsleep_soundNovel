@@ -79,19 +79,19 @@
 “남의 꿈인 건 어떻게 알아요?”
 <br>
 <br>
-연구자 3이 그렇게 묻자 김이리에는 ‘<span :class="{'sound-text' : visited[49] === 'disabled', 'sound_text_visited' : visited[49] === 'active', 'sound_text_visited' : visited[49] === 'stop'}" @click="play('맵')">미생성된 맵</span> 이탈론’을 설명해줬다. 타인의 꿈 말로에서는 꼭 추락한다는 법칙이었다. 쫓겨나는 것처럼 말이다. 
+연구자 3이 그렇게 묻자 김이리에는 ‘<span class="sound_text_visited" :class="{'sound-text' : visited[49] === 'disabled'}" @click="play('맵')">미생성된 맵</span> 이탈론’을 설명해줬다. 타인의 꿈 말로에서는 꼭 추락한다는 법칙이었다. 쫓겨나는 것처럼 말이다. 
 <br>
 <br>
 “그럼 꿈속에서 꿈 주인을 만난 적도 있어요?”
 <br>
 <br>
-“네. 가끔 엑스트라도 해줬어요. <span :class="{'sound-text' : visited[50] === 'disabled', 'sound_text_visited' : visited[50] === 'active', 'sound_text_visited' : visited[50] === 'stop'}" @click="play('거울')">꿈에는 거울이 없어서</span> 정확히 어떤 분장인지는 잘 모르겠는데….”
+“네. 가끔 엑스트라도 해줬어요. <span class="sound_text_visited" :class="{'sound-text' : visited[50] === 'disabled'}" @click="play('거울')">꿈에는 거울이 없어서</span> 정확히 어떤 분장인지는 잘 모르겠는데….”
 <br>
 <br>
 <br>
 <br>
 
-분홍색 단발머리를 한 문학 선생님을 만났다. 선생님은 큰 새를 타고 바다 위의 하늘을 날아다녔다. 햇볕이 뜨거워지면 커다란 배로 돌아가서 <span :class="{'sound-text' : visited[51] === 'disabled', 'sound_text_visited' : visited[51] === 'active', 'sound_text_visited' : visited[51] === 'stop'}" @click="play('햇볕')">쉬는 것 같았다.</span> 역시 이카루스 이야기를 알고 계시기 때문일까? <br>
+분홍색 단발머리를 한 문학 선생님을 만났다. 선생님은 큰 새를 타고 바다 위의 하늘을 날아다녔다. 햇볕이 뜨거워지면 커다란 배로 돌아가서 <span class="sound_text_visited" :class="{'sound-text' : visited[51] === 'disabled'}" @click="play('햇볕')">쉬는 것 같았다.</span> 역시 이카루스 이야기를 알고 계시기 때문일까? <br>
 나는 그 배에서 일하는 선원이었다. 선생님, 분홍색 단발머리가 잘 어울려요. 말하려다가 어울리는 대사가 아닌 것 같아 기각했다. <br>
 이 꿈은 커다란 새를 훔쳐 타려다가 끝이 났다. 꾸벅꾸벅 졸다가 날아오른 새가 뒤늦게 내 얼굴을 확인했다. 그리고 화가 난 것처럼 크게 날개를 휘저었다. 나는 추락했고, 선생님은 바다 속을 따로 상상해놓지 않았기 때문에 그대로 현실에 돌아왔다.   <br>
 <br>
@@ -102,9 +102,9 @@
 지각할 뻔했다. 그런데 지각하지 않았다.<br>
 왜냐하면 꿈의 주인도 어쩔 수 없는 음향원 학생이었기 때문이다.<br>
 나는 줄을 서있는 사람들 중 하나였다. 모두가 감독관을 기다리고 있었다. 그의 지시에 따라 사람들은 세 개의 컨베이어 벨트로 나뉘어 보내졌다. 기준은 잘 알 수 없었다.<br>
-나보다 네 명 정도 앞선 사람은 뒷목에 점이 있었다. 점이 여러 개 있었다. 감독관은 그걸 펜으로 이어보고 <span :class="{'sound-text' : visited[52] === 'disabled', 'sound_text_visited' : visited[52] === 'active', 'sound_text_visited' : visited[52] === 'stop'}" @click="play('고개')">고개를 끄덕였다.</span><br>
+나보다 네 명 정도 앞선 사람은 뒷목에 점이 있었다. 점이 여러 개 있었다. 감독관은 그걸 펜으로 이어보고 <span class="sound_text_visited" :class="{'sound-text' : visited[52] === 'disabled'}" @click="play('고개')">고개를 끄덕였다.</span><br>
 <br> 
-나에게는 "눈을 똑바로 떠보라"고 했다. 눈을 뜨고 있는 건 확실했다. 앞이 보였으니까. 하지만 푸른 멜빵바지를 입은 감독관은 자꾸 "그렇게는 아닙니다. 다르게요. <span :class="{'sound-text' : visited[53] === 'disabled', 'sound_text_visited' : visited[53] === 'active', 'sound_text_visited' : visited[53] === 'stop'}" @click="play('다르게')">다르게.</span>" 라고 다그쳤다. 마지막으로는 한숨을 쉬고 나를 중간 컨베이어 벨트에 실어 보냈다.<br>
+나에게는 "눈을 똑바로 떠보라"고 했다. 눈을 뜨고 있는 건 확실했다. 앞이 보였으니까. 하지만 푸른 멜빵바지를 입은 감독관은 자꾸 "그렇게는 아닙니다. 다르게요. <span class="sound_text_visited" :class="{'sound-text' : visited[53] === 'disabled'}" @click="play('다르게')">다르게.</span>" 라고 다그쳤다. 마지막으로는 한숨을 쉬고 나를 중간 컨베이어 벨트에 실어 보냈다.<br>
 벨트가 너무 길어서 초조해지기 시작했다. 이대로 기다리다가는 음향원에 지각할 것 같았기 때문이다. 다행히 곧 벨트가 뒤집히면서 추락했다. 평소보다 15분 늦게 깨어났다. 꿈의 주인이 원망스러웠지만, 그래도 함께 지각은 면했다.
 <br>
 <br>
@@ -141,27 +141,27 @@ export default {
             case '맵' :      
                 store.commit("toggleText", 49)
                 eventBus.$emit("iconUsable", 49); 
-                this.visited[49] = store.getters['getMusicIconUsable'](49);
+                this.visited[49] = 'active';
                 break; 
             case "거울" :
                 store.commit("toggleText", 50)
                 eventBus.$emit("iconUsable", 50); 
-                this.visited[50] = store.getters['getMusicIconUsable'](50);
+                this.visited[50] = 'active';
                 break;
             case "햇볕" :
                 store.commit("toggleText", 51)
                 eventBus.$emit("iconUsable", 51); 
-                this.visited[51] = store.getters['getMusicIconUsable'](51);
+                this.visited[51] = 'active';
                 break;
             case "고개" :
                 store.commit("toggleText", 52)
                 eventBus.$emit("iconUsable", 52); 
-                this.visited[52] = store.getters['getMusicIconUsable'](52);
+                this.visited[52] = 'active';
                 break;
             case "다르게" :
                 store.commit("toggleText", 53)
                 eventBus.$emit("iconUsable", 53); 
-                this.visited[53] = store.getters['getMusicIconUsable'](53);
+                this.visited[53] = 'active';
                 break;
         }
     }

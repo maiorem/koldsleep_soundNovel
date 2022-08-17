@@ -9,16 +9,16 @@
  인간은 스스로의 꿈에 대해 책임이 있는가? 그렇다면 너무 가혹한 일이다. 그래서 콜드슬립 연구소는 이론을 들먹이며 꿈을 해석하지 않는다. 무의식에 그 원인을 돌리지 않는다. 꿈은 뇌가 기억을 정리하던 도중에 엎어진 상자와도 같은 것이다. 헝클어진 콜라주일 뿐이다.
 <br>
 <br>
-그러나 개중에서도 더 자주 엎어지는 상자는 있다. 우리의 채널헤드들은 <span :class="{'sound-text' : visited[22] === 'disabled', 'sound_text_visited' : visited[22] === 'active', 'sound_text_visited' : visited[22] === 'stop'}" @click="play('사람')">사람을 죽일 때</span>, <span :class="{'sound-text' : visited[23] === 'disabled', 'sound_text_visited' : visited[23] === 'active', 'sound_text_visited' : visited[23] === 'stop'}" @click="play('영웅')">영웅이 될 때</span>, 태연하게 <span :class="{'sound-text' : visited[24] === 'disabled', 'sound_text_visited' : visited[24] === 'active', 'sound_text_visited' : visited[24] === 'stop'}" @click="play('운전')">자동차를 운전할 때</span>, <span :class="{'sound-text' : visited[25] === 'disabled', 'sound_text_visited' : visited[25] === 'active', 'sound_text_visited' : visited[25] === 'stop'}" @click="play('상황')">상황이 원하는 대로 전개</span>되거나 자기 의지대로 되지 않을 때 상자가 엎어진 것을 깨닫는다고 한다. 그러니까, 그들이 눈치 채는 지진의 기미는 같지 않다. 하나의 사례로는 다른 세계의 흔들림을 점칠 수가 없다.
+그러나 개중에서도 더 자주 엎어지는 상자는 있다. 우리의 채널헤드들은 <span class="sound_text_visited" :class="{'sound-text' : visited[22] === 'disabled'}" @click="play('사람')">사람을 죽일 때</span>, <span class="sound_text_visited" :class="{'sound-text' : visited[23] === 'disabled'}" @click="play('영웅')">영웅이 될 때</span>, 태연하게 <span class="sound_text_visited" :class="{'sound-text' : visited[24] === 'disabled'}" @click="play('운전')">자동차를 운전할 때</span>, <span class="sound_text_visited" :class="{'sound-text' : visited[25] === 'disabled'}" @click="play('상황')">상황이 원하는 대로 전개</span>되거나 자기 의지대로 되지 않을 때 상자가 엎어진 것을 깨닫는다고 한다. 그러니까, 그들이 눈치 채는 지진의 기미는 같지 않다. 하나의 사례로는 다른 세계의 흔들림을 점칠 수가 없다.
 <br>
 <br>
-나는 <span :class="{'sound-text' : visited[26] === 'disabled', 'sound_text_visited' : visited[26] === 'active', 'sound_text_visited' : visited[26] === 'stop'}" @click="play('캔디')">스트로베리 캔디</span>를 목격하는 순간 깨닫는다. 이 세상에서는 내가 할 수 있는 것이 없구나, 단지 캔디 케이스의 뚜껑을 여는 수밖에. 그때부터는 나의 어린 두 손이 기다렸다는 듯이 닫힌 철제 뚜껑을 연다. 열어버린다. 그 안에는 단내에 이끌렸다가 나오지 못한 개미들이 버글거린다. 할머니의 빠진 치아들이 있을 때도 있고, 엄마의 손가락 끝이 빨갛게 얼어 있기도 하다. 
+나는 <span class="sound_text_visited" :class="{'sound-text' : visited[26] === 'disabled'}" @click="play('캔디')">스트로베리 캔디</span>를 목격하는 순간 깨닫는다. 이 세상에서는 내가 할 수 있는 것이 없구나, 단지 캔디 케이스의 뚜껑을 여는 수밖에. 그때부터는 나의 어린 두 손이 기다렸다는 듯이 닫힌 철제 뚜껑을 연다. 열어버린다. 그 안에는 단내에 이끌렸다가 나오지 못한 개미들이 버글거린다. 할머니의 빠진 치아들이 있을 때도 있고, 엄마의 손가락 끝이 빨갛게 얼어 있기도 하다. 
 <br>
 <br>
 “선우야. 그거 이제 선우 거야.”
 <br>
 <br>
-매번 미친 듯이 <span :class="{'sound-text' : visited[27] === 'disabled', 'sound_text_visited' : visited[27] === 'active', 'sound_text_visited' : visited[27] === 'stop'}" @click="play('소리')">소리를 지르지만</span>, 누구의 귀에도 가청주파수가 아니다.
+매번 미친 듯이 <span class="sound_text_visited" :class="{'sound-text' : visited[27] === 'disabled'}" @click="play('소리')">소리를 지르지만</span>, 누구의 귀에도 가청주파수가 아니다.
 <br>
 <br>
 “요즘은 자려고 누우면 자꾸 파편적인 목소리가 들려.”
@@ -30,7 +30,7 @@
 “그럼 그 장소에 관한 꿈을 꾸기도 하고….”
 <br>
 <br>
-96년 9월 17일 <span :class="{'sound-text' : visited[28] === 'disabled', 'sound_text_visited' : visited[28] === 'active', 'sound_text_visited' : visited[28] === 'stop'}" @click="play('오후')">오후 4시</span>, 아무도 없는 가정집에 앉아 있던 것. 누굴 기다리는 것처럼. 2호선 지하철을 타고나서 그 차가 <span :class="{'sound-text' : visited[29] === 'disabled', 'sound_text_visited' : visited[29] === 'active', 'sound_text_visited' : visited[29] === 'stop'}" @click="play('급행')">뉴욕으로 가는 급행</span>이라는 걸 깨닫게 되거나. 단 한 번도 본 적이 없는 곳일 때도 문 너머에 뭐가 있는지 아는 것만 같아.
+96년 9월 17일 <span class="sound_text_visited" :class="{'sound-text' : visited[28] === 'disabled'}" @click="play('오후')">오후 4시</span>, 아무도 없는 가정집에 앉아 있던 것. 누굴 기다리는 것처럼. 2호선 지하철을 타고나서 그 차가 <span class="sound_text_visited" :class="{'sound-text' : visited[29] === 'disabled'}" @click="play('급행')">뉴욕으로 가는 급행</span>이라는 걸 깨닫게 되거나. 단 한 번도 본 적이 없는 곳일 때도 문 너머에 뭐가 있는지 아는 것만 같아.
 <br>
 <br>
 “96년 그 날에 무슨 일이 있었는데?”
@@ -54,7 +54,7 @@
 <br>
 <br>
 
-오늘은 그와 세계의 부조화에 대해서 듣고 싶은 날이 아니었다. 김이리에가 다른 사람들과 얼마나 다른 일을 겪고, 그것에 대해 걔가 얼마나 고민하는지 함께 궁리해주기 싫었다. 나는 김이리에가 아니다. 그가 문을 열고 드나드는 안쪽, 혹은 바깥쪽의 무리이다. 내가 말을 멈춘 잠시 동안, <span :class="{'sound-text' : visited[30] === 'disabled', 'sound_text_visited' : visited[30] === 'active', 'sound_text_visited' : visited[30] === 'stop'}" @click="play('은행나무')">은행나무</span> 낙엽이 싸르르 서로 부딪히는 소리만이 남았다. 무언가를 만류하거나 기별하듯이. 
+오늘은 그와 세계의 부조화에 대해서 듣고 싶은 날이 아니었다. 김이리에가 다른 사람들과 얼마나 다른 일을 겪고, 그것에 대해 걔가 얼마나 고민하는지 함께 궁리해주기 싫었다. 나는 김이리에가 아니다. 그가 문을 열고 드나드는 안쪽, 혹은 바깥쪽의 무리이다. 내가 말을 멈춘 잠시 동안, <span class="sound_text_visited" :class="{'sound-text' : visited[30] === 'disabled'}" @click="play('은행나무')">은행나무</span> 낙엽이 싸르르 서로 부딪히는 소리만이 남았다. 무언가를 만류하거나 기별하듯이. 
 <br>
 <br>
 “왜 너한테만 계속 특별한 일이 생길까?”
@@ -139,7 +139,7 @@
 그래도 이 독점이 계속되기를 바랐다. 기한은 아마, 대가를 바라지 않는 마음에도 한계점이 있다는 것을 이리에가 깨달을 때까지. 그가 결국 우리의 서사는 분리되어 있다는 걸 알아챌 때까지. 
 <br>
 <br>
-네 옆에 있으면 최악의 인간이 되는 것만 같아. 그럼에도 김이리에는 절대로 나를 최악의 인간으로 여기지 않는다. 그 사실 때문에 좀처럼 도망치기가 어렵다. 사람의 애정은 마음을 녹여서 <span :class="{'sound-text' : visited[31] === 'disabled', 'sound_text_visited' : visited[31] === 'active', 'sound_text_visited' : visited[31] === 'stop'}" @click="play('늪')">그 액체가 채워진 늪</span>에 스스로 빠지도록 만들 때가 있다.
+네 옆에 있으면 최악의 인간이 되는 것만 같아. 그럼에도 김이리에는 절대로 나를 최악의 인간으로 여기지 않는다. 그 사실 때문에 좀처럼 도망치기가 어렵다. 사람의 애정은 마음을 녹여서 <span class="sound_text_visited" :class="{'sound-text' : visited[31] === 'disabled'}" @click="play('늪')">그 액체가 채워진 늪</span>에 스스로 빠지도록 만들 때가 있다.
 <br>
 <br>
             </div>
@@ -180,52 +180,52 @@ export default {
             case '사람' :      
                 store.commit("toggleText", 22)
                 eventBus.$emit("iconUsable", 22); 
-                this.visited[22] = store.getters['getMusicIconUsable'](22);
+                this.visited[22] = 'active';
                 break; 
             case "영웅" :
                 store.commit("toggleText", 23)
                 eventBus.$emit("iconUsable", 23); 
-                this.visited[23] = store.getters['getMusicIconUsable'](23);
+                this.visited[23] = 'active';
                 break;
             case "운전" :
                 store.commit("toggleText", 24)
                 eventBus.$emit("iconUsable", 24); 
-                this.visited[24] = store.getters['getMusicIconUsable'](24);
+                this.visited[24] = 'active';
                 break;
             case "상황" :
                 store.commit("toggleText", 25)
                 eventBus.$emit("iconUsable", 25);
-                this.visited[25] = store.getters['getMusicIconUsable'](25); 
+                this.visited[25] = 'active';
                 break;
             case "캔디" :
                 store.commit("toggleText", 26)
                 eventBus.$emit("iconUsable", 26); 
-                this.visited[26] = store.getters['getMusicIconUsable'](26);
+                this.visited[26] = 'active';
                 break;
             case "소리" :
                 store.commit("toggleText", 27)
                 eventBus.$emit("iconUsable", 27); 
-                this.visited[27] = store.getters['getMusicIconUsable'](27);
+                this.visited[27] = 'active';
                 break;
             case "오후" :
                 store.commit("toggleText", 28)
                 eventBus.$emit("iconUsable", 28); 
-                this.visited[28] = store.getters['getMusicIconUsable'](28);
+                this.visited[28] = 'active';
                 break;
             case "급행" :
                 store.commit("toggleText", 29)
                 eventBus.$emit("iconUsable", 29); 
-                this.visited[29] = store.getters['getMusicIconUsable'](29);
+                this.visited[29] = 'active';
                 break;
             case "은행나무" :
                 store.commit("toggleText", 30)
                 eventBus.$emit("iconUsable", 30); 
-                this.visited[30] = store.getters['getMusicIconUsable'](30);
+                this.visited[30] = 'active';
                 break;
             case "늪" :
                 store.commit("toggleText", 31)
                 eventBus.$emit("iconUsable", 31); 
-                this.visited[31] = store.getters['getMusicIconUsable'](31);
+                this.visited[31] = 'active';
                 break;
         }
     }
