@@ -22,12 +22,10 @@ export default {
   data() {
     return {
       src : [
-        'https://koldsleep.netlify.app/img/수면4.4fd0a85e.gif',
         'https://koldsleep.netlify.app/img/수면8.b66174ed.gif',
         'https://koldsleep.netlify.app/img/수면13.a0def2b0.gif',
         'https://koldsleep.netlify.app/img/수면9.0aa9e515.webp',
         'https://koldsleep.netlify.app/img/수면10.e3237dd2.webp',
-        'https://koldsleep.netlify.app/img/수면12.96cdb0ad.webp',
       ]
     }
   }
@@ -46,11 +44,9 @@ export default {
   text-align: center;
 
   background-image: 
-  url('@/assets/img/bg/수면4.gif'),
   url('@/assets/img/bg/수면8.gif'),
   url('@/assets/img/bg/수면9.webp'),
   url('@/assets/img/bg/수면10.webp'),
-  url('@/assets/img/bg/수면12.webp'),
   url('@/assets/img/bg/수면13.gif');
 
   height: 100vh;
