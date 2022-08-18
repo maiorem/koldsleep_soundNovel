@@ -146,9 +146,6 @@ export default {
             52 : store.getters['getMusicIconUsable'](52),
             53 : store.getters['getMusicIconUsable'](53),
             54 : store.getters['getMusicIconUsable'](54),
-            55 : store.getters['getMusicIconUsable'](55),
-
-
         }
     }
   },

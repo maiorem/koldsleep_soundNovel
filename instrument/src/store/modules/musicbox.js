@@ -14,7 +14,7 @@ import audio13 from '@/assets/sounds/voice/움직이다 지피죽 엄지발가�
 import audio14 from '@/assets/sounds/voice/못움직이는 드디어 옆구리.wav'
 import audio15 from '@/assets/sounds/voice/공격하는 그곳 중지뼈.wav'
 import audio16 from '@/assets/sounds/voice/대화하는 안개 손가락.wav'
-import audio17 from '@/assets/sounds/voice/바라보는 여기 아래로.wav'
+import audio17 from '@/assets/sounds/voice/표정이 달라지는 비냄새.wav'
 import audio18 from '@/assets/sounds/voice/우는 달 손목.wav'
 import audio19 from '@/assets/sounds/voice/멈추다 분노.wav'
 import audio20 from '@/assets/sounds/voice/주먹을 쥐고 쓰나미 앞에 선 머리.wav'
@@ -52,7 +52,6 @@ import audio51 from '@/assets/sounds/voice/멈추다 꽃밭 손목.wav'
 import audio52 from '@/assets/sounds/voice/못하는 뒷목 점.wav'
 import audio53 from '@/assets/sounds/voice/현실을 듣는 피부 위 점.wav'
 import audio54 from '@/assets/sounds/voice/사랑하다 산하엽 날개 뼈 오른 쪽.wav'
-import audio55 from '@/assets/sounds/voice/표정이 달라지는 비냄새.wav'
 
 const state = {
     musicIcons : {
@@ -110,7 +109,6 @@ const state = {
         52: { "usable" :"disabled", "src" : audio52},
         53: { "usable" :"disabled", "src" : audio53},
         54: { "usable" :"disabled", "src" : audio54},
-        55: { "usable" :"disabled", "src" : audio55},
 
     },
 };
@@ -129,7 +127,7 @@ const getters = {
 
 var audios = [];
 var i;
-for (i=0; i<55; i++) {
+for (i=0; i<54; i++) {
     audios.push(new Audio(state.musicIcons[i+1].src))
 }
 

@@ -133,7 +133,7 @@
 <br>
 <br>
 여기.<br>
-부디 당신이 <span class="sound_text_visited" :class="{'sound-text' : visited[17] === 'disabled'}" @click="play('아래')">바라보는 여기 아래</span>를 파헤치세요. <span class="sound_text_visited" :class="{'sound-text' : visited[18] === 'disabled'}" @click="play('행운')">행운을 빕니다.</span>
+부디 이곳을 파헤치세요. <span class="sound_text_visited" :class="{'sound-text' : visited[18] === 'disabled'}" @click="play('행운')">행운을 빕니다.</span>
 <br>
 <br>
 
@@ -180,7 +180,7 @@ export default {
                 eventBus.$emit("iconUsable", 16); 
                 this.visited[16] = 'active';
                 break;
-            case "아래" :
+            case "표정" :
                 store.commit("toggleText", 17)
                 eventBus.$emit("iconUsable", 17); 
                 this.visited[17] = 'active';
@@ -189,11 +189,6 @@ export default {
                 store.commit("toggleText", 18)
                 eventBus.$emit("iconUsable", 18); 
                 this.visited[18] = 'active';
-                break;
-            case "표정" :
-                store.commit("toggleText", 55)
-                eventBus.$emit("iconUsable", 55); 
-                this.visited[55] = 'active';
                 break;
         }
     }
