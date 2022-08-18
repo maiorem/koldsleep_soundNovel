@@ -61,7 +61,7 @@
 “하늘의 고래와 눈을 마주치다?”
 <br>
 <br>
-채점을 기다리듯이 증언하자 김이리에는 활짝 웃었다. <span class="sound_text_visited" :class="{'sound-text' : visited[55] === 'disabled'}" @click="play('표정')">달라진 표정이 빗줄기 속에서도 선명했다.</span>
+채점을 기다리듯이 증언하자 김이리에는 활짝 웃었다. <span class="sound_text_visited" :class="{'sound-text' : visited[17] === 'disabled'}" @click="play('표정')">달라진 표정이 빗줄기 속에서도 선명했다.</span>
 <br>
 <br>
 “맞아. 너도 이제 고래네.”
@@ -158,7 +158,6 @@ export default {
             16: store.getters['getMusicIconUsable'](16), 
             17: store.getters['getMusicIconUsable'](17),
             18: store.getters['getMusicIconUsable'](18),
-            55: store.getters['getMusicIconUsable'](55),
         },
         
     }
