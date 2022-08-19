@@ -22,10 +22,16 @@ export default {
   data() {
     return {
       src : [
-        'https://koldsleep.netlify.app/img/수면8.b66174ed.gif',
-        'https://koldsleep.netlify.app/img/수면13.a0def2b0.gif',
-        'https://koldsleep.netlify.app/img/수면9.0aa9e515.webp',
-        'https://koldsleep.netlify.app/img/수면10.e3237dd2.webp',
+        'https://koldsleep.netlify.app/img/gif1.9424436f.gif',
+        'https://koldsleep.netlify.app/img/gif2.5534c96b.gif',
+        'https://koldsleep.netlify.app/img/gif4.b01128d4.gif',
+        'https://koldsleep.netlify.app/img/gif5.f74d3d3c.gif',
+        'https://koldsleep.netlify.app/img/gif8.9ea53f37.gif',
+        'https://koldsleep.netlify.app/img/gif9.01f8808b.gif',
+        'https://koldsleep.netlify.app/img/gif10.72ce4097.gif',
+        'https://koldsleep.netlify.app/img/gif13.80d64358.gif',
+        'https://koldsleep.netlify.app/img/gif15.be40608b.gif',
+        'https://koldsleep.netlify.app/img/gif17.002cc416.gif',
       ]
     }
   }
@@ -44,10 +50,16 @@ export default {
   text-align: center;
 
   background-image: 
-  url('@/assets/img/bg/수면8.gif'),
-  url('@/assets/img/bg/수면9.webp'),
-  url('@/assets/img/bg/수면10.webp'),
-  url('@/assets/img/bg/수면13.gif');
+  url('@/assets/img/bg/gif1.gif'),
+  url('@/assets/img/bg/gif2.gif'),
+  url('@/assets/img/bg/gif4.gif'),
+  url('@/assets/img/bg/gif5.gif'),
+  url('@/assets/img/bg/gif8.gif'),
+  url('@/assets/img/bg/gif9.gif'),
+  url('@/assets/img/bg/gif10.gif'),
+  url('@/assets/img/bg/gif13.gif'),
+  url('@/assets/img/bg/gif15.gif'),
+  url('@/assets/img/bg/gif17.gif');
 
   height: 100vh;
   margin:0; 
