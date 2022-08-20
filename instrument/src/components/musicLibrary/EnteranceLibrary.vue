@@ -22,7 +22,7 @@
         </ul>
         </div>
       </div>
-      <MusicBox v-draggable="{ update: active }"  v-on:emptyEvent="emptyEvent" v-click-outside="onClickOutside"/>
+      <MusicBox v-draggable="{ update: active }"  v-on:emptyEvent="emptyEvent" />
       
       <PersonalInstrumentIntro v-draggable="{ update: active }" v-show="isShow[0]" v-on:btnclose="btnClose(0)"/>
       <indexOne v-draggable="{ update: active }" v-show="isShow[1]"  v-on:btnclose="btnClose(1)" />
@@ -39,12 +39,12 @@
       <indexTwelve v-draggable="{ update: active }" v-show="isShow[12]"  v-on:btnclose="btnClose(12)" />
       <indexThirteen v-draggable="{ update: active }" v-show="isShow[13]"  v-on:btnclose="btnClose(13)" />
       <indexFourteen v-draggable="{ update: active }" v-show="isShow[14]"  v-on:btnclose="btnClose(14)" />
-      <div v-show="emptyState" class="emptyBox">
-        <div class="textBox">
+      <transition name="fade" v-on:enter="enter" class="emptyBox">
+        <div v-show="emptyState" class="textBox">
           채널헤드의 목소리를 발견하고<br>
           그들이 서로를 알아채게 만들어주세요.
         </div>
-      </div>
+      </transition>
     </div>
     <div class="mobile_container">
       <div class="cat_box">
@@ -71,7 +71,7 @@
         </ul>
         </div>
       </div>
-      <MusicBox />
+      <MusicBox  v-on:emptyEvent="emptyEvent" />
       
       <PersonalInstrumentIntro v-show="isShow[0]" v-on:btnclose="btnClose(0)"/>
       <indexOne v-show="isShow[1]"  v-on:btnclose="btnClose(1)" />
@@ -88,12 +88,12 @@
       <indexTwelve v-show="isShow[12]"  v-on:btnclose="btnClose(12)" />
       <indexThirteen v-show="isShow[13]"  v-on:btnclose="btnClose(13)" />
       <indexFourteen v-show="isShow[14]"  v-on:btnclose="btnClose(14)" />
-      <div v-show="emptyState" class="emptyBox">
-        <div class="textBox">
+      <transition name="fade" v-on:enter="enter" class="emptyBox">
+        <div v-show="emptyState" class="textBox">
           채널헤드의 목소리를 발견하고<br>
           그들이 서로를 알아채게 만들어주세요.
         </div>
-      </div>
+      </transition>
     </div>
   </div>
   
@@ -165,11 +165,16 @@ export default {
     emptyEvent() {
       this.emptyState = true
     },
-    onClickOutside() {
-      if (this.emptyState == true) {
-        this.emptyState = !this.emptyState
+
+    enter() {
+      var that = this;
+      if (that.emptyState == true) {
+        setTimeout(function() {
+          that.emptyState = false;
+        }, 2000); 
+      } else {
+        return
       }
-      
     }
 
   },
@@ -341,7 +346,19 @@ display: none;
 }
 .dialog-header {
   display: none;
+
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1s;
+}
+
+.fade-enter,
+.fade-leave-to{
+  opacity: 0;
+}
+
 
 @media (max-width: 600px) {
 
@@ -368,6 +385,7 @@ display: none;
 
     .emptyBox{
       left: 0;
+      top : 50%;
       width: 100vw;
     }
 
