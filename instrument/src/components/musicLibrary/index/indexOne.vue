@@ -191,7 +191,7 @@ export default {
     line-height: 200%;
     /* or 36px */
 
-    text-align: left;
+    text-align: justify ;
     color: #F1F1F1;
 
 }
