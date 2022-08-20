@@ -240,7 +240,7 @@ transform: rotate(6.69deg);
 
 .textBox{
   position: relative;
-  top: 220px;
+  top: 420px;
   font-weight: 600;
   font-size: 28px;
   line-height: 34px;
