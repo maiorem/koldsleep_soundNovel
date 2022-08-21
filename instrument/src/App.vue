@@ -52,13 +52,20 @@ export default {
   background-image: 
   url('@/assets/img/bg/gif1.gif'),
   url('@/assets/img/bg/gif2.gif'),
+  url('@/assets/img/bg/gif3.gif'),
   url('@/assets/img/bg/gif4.gif'),
   url('@/assets/img/bg/gif5.gif'),
+  url('@/assets/img/bg/gif6.gif'),
+  url('@/assets/img/bg/gif7.gif'),
   url('@/assets/img/bg/gif8.gif'),
   url('@/assets/img/bg/gif9.gif'),
   url('@/assets/img/bg/gif10.gif'),
+  url('@/assets/img/bg/gif11.gif'),
+  url('@/assets/img/bg/gif12.gif'),
   url('@/assets/img/bg/gif13.gif'),
+  url('@/assets/img/bg/gif14.gif'),
   url('@/assets/img/bg/gif15.gif'),
+  url('@/assets/img/bg/gif16.gif'),
   url('@/assets/img/bg/gif17.gif');
 
   height: 100vh;
