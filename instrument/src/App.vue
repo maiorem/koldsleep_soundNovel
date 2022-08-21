@@ -22,16 +22,23 @@ export default {
   data() {
     return {
       src : [
-        'https://koldsleep.netlify.app/img/gif1.9424436f.gif',
-        'https://koldsleep.netlify.app/img/gif2.5534c96b.gif',
-        'https://koldsleep.netlify.app/img/gif4.b01128d4.gif',
-        'https://koldsleep.netlify.app/img/gif5.f74d3d3c.gif',
-        'https://koldsleep.netlify.app/img/gif8.9ea53f37.gif',
-        'https://koldsleep.netlify.app/img/gif9.01f8808b.gif',
-        'https://koldsleep.netlify.app/img/gif10.72ce4097.gif',
-        'https://koldsleep.netlify.app/img/gif13.80d64358.gif',
-        'https://koldsleep.netlify.app/img/gif15.be40608b.gif',
-        'https://koldsleep.netlify.app/img/gif17.002cc416.gif',
+        'https://koldsleep.netlify.app/img/gif1.bc7a8485.gif',
+        'https://koldsleep.netlify.app/img/gif2.0b16fefa.gif',
+        'https://koldsleep.netlify.app/img/gif3.c1ca218a.gif',
+        'https://koldsleep.netlify.app/img/gif4.3e217952.gif',
+        'https://koldsleep.netlify.app/img/gif5.660cf6d8.gif',
+        'https://koldsleep.netlify.app/img/gif6.43e68267.gif',
+        'https://koldsleep.netlify.app/img/gif7.32f201d1.gif',
+        'https://koldsleep.netlify.app/img/gif8.3a878cae.gif',
+        'https://koldsleep.netlify.app/img/gif9.489d82ab.gif',
+        'https://koldsleep.netlify.app/img/gif10.a25f35f3.gif',
+        'https://koldsleep.netlify.app/img/gif11.c7d61d59.gif',
+        'https://koldsleep.netlify.app/img/gif12.c72dedbc.gif',
+        'https://koldsleep.netlify.app/img/gif13.0df2e347.gif',
+        'https://koldsleep.netlify.app/img/gif14.32f6b119.gif',
+        'https://koldsleep.netlify.app/img/gif15.b1dd1cfc.gif',
+        'https://koldsleep.netlify.app/img/gif16.c57fb743.gif',
+        'https://koldsleep.netlify.app/img/gif17.7c97d515.gif',
       ]
     }
   }
